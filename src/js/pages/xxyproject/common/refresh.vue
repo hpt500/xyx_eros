@@ -45,9 +45,12 @@ export default {
             }                        
         },
         endRefresh(time) {
+            const deal = this.xxyKey;
             setTimeout(() => {
+    
                 this.$emit('loadingDown', {
-                    status: 'loadingDown'
+                    status: 'loadingDown',
+                    index: deal,
                 })       
                 setTimeout(() => {
                     this.refreshing = false
