@@ -78,7 +78,6 @@
             this.tabPageHeight = Utils.env.getPageHeight()-70;
             this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
             Vue.set(this.tabList, this.hindex, this.demoList);
-            
         },
         components: {
             'xxy-header': xxy_header,
