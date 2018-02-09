@@ -11,7 +11,7 @@
                             :is-tab-view="isTabView"
                             :tab-page-height="tabPageHeight"
                             @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">    
-                <list v-for="(v,index) in tabList"
+                <scroller v-for="(v,index) in tabList"
                         :key="index" 
                         class="item-container" offset-accuracy="300px" 
                         :style="{ height: (tabPageHeight - tabStyles.height) + 'px' }">
@@ -21,18 +21,24 @@
                                 :xxyKey="index"></refresher>
                     <!--<cell class="border-cellborder-cell"></cell>-->
                     
-                    <cell v-for="(demo,key) in v"
-                            class="cell"
+                    <div v-for="(demo,key) in v"
+                            class="xxyGameBox"
                             :key="key">
                         <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
                                     url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
                                     @wxcPanItemPan="wxcPanItemPan">
-                            <div class="content">
-                                <text>{{key}}</text>
+                            <image :src="demo.pic" class="xxyGb_pic"></image>
+                            <div class="xxyGb_msg">
+                                <text>{{demo.name}}</text>
+                                <div class="xxyGb_score">
+                                    <!--新秀游评分-->
+                                    <image :src="'http://www.xinxiuyou.com/static/img/'+demo.score+'.png'" class="xxyGbs_star"></image>
+                                    <text class="xxyGbs_num">{{demo.score}}</text>
+                                </div>
                             </div>
                         </wxc-pan-item>
-                    </cell>
-                </list>
+                    </div>
+                </scroller>
                
             </wxc-tab-page>
             
@@ -69,7 +75,7 @@
                 tabPageHeight: 1334,
 
                 tabList: [],
-                demoList: [1,2],
+                demoList: [],
                 supportSlide: true,
                 
             }
@@ -77,7 +83,7 @@
         created () {
             this.tabPageHeight = Utils.env.getPageHeight()-70;
             this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
-            Vue.set(this.tabList, this.hindex, this.demoList);
+            this.init();
         },
         components: {
             'xxy-header': xxy_header,
@@ -93,7 +99,7 @@
                 /* Unloaded tab analog data request */
                 if (!Utils.isNonEmptyArray(self.tabList[this.hindex])) {
                     setTimeout(() => {
-                        Vue.set(self.tabList, this.hindex, self.demoList);
+                        this.xxyDealLoad(this.hindex)
                     }, 100);
                 }
             },
@@ -104,52 +110,70 @@
                 }
             },
             init(){
-                // xxyAni();
+                this.xxyAni();
             },
             // 新秀游动态
             xxyAni (){
+                // this.$fetch({
+                //     method: 'GET',
+                //     name: 'yanxuan_home_getYXBanners',
+                //     data: {}
+                // }).then(resData => {
+                //     this.YXBanners = resData.data
+                // }, error => {
+
+                // })
+                this.demoList[0] = Config.xxyAniMsg;
+                Vue.set(this.tabList, 0, this.demoList[0]);
 
             },
             // 新秀游视频
             xxyVid (){
+                // this.$fetch({
+                //     method: 'GET',
+                //     name: 'yanxuan_home_getYXBanners',
+                //     data: {}
+                // }).then(resData => {
+                //     this.YXBanners = resData.data
+                // }, error => {
 
+                // })
+                this.demoList[1] = Config.xxyVidMsg;
+                Vue.set(this.tabList, 1, this.demoList[1]);
             },
             // 新秀游热点
             xxyHot (){
-                
+                // this.$fetch({
+                //     method: 'GET',
+                //     name: 'yanxuan_home_getYXBanners',
+                //     data: {}
+                // }).then(resData => {
+                //     this.YXBanners = resData.data
+                // }, error => {
+
+                // })
+                this.demoList[2] = Config.xxyHotMsg;
+                Vue.set(this.tabList, 2, this.demoList[2]);
             },
             // 新秀游数据请求 
-            xxyDealLoad (){
-                const ajaxIndex = this.hindex;
-                
-                if(ajaxIndex==0){
-                // 动态
-                
-                }else if(ajaxIndex==1){
-                // 视频
-
-                }else if(ajaxIndex==2){
-                // 热点
-
+            xxyDealLoad (val){          
+                if(val==0){// 动态
+                    this.xxyAni()
+                }else if(val==1){ // 视频
+                    this.xxyVid()
+                }else if(val==2){ // 热点
+                    this.xxyHot()
                 }
-
-
             },
             // 新秀游数据
             xxyDeal (){
-                Vue.set(this.tabList, this.hindex, this.demoList)
+                // Vue.set(this.tabList, this.hindex, this.demoList)
             },
-
             // 刷新完 -- 回调函数
             loadingDown (e){
                 console.log("获取回调并重新刷新数据")
-                console.log(e)
-                console.log(e.status)
-                // Vue.set(this.tabList, this.hindex, []);
-                // this.xxyDeal ();
-                // Vue.set(this.tabList, this.hindex, this.demoList)
-
-                // Vue.set(self.tabList, this.hindex, self.demoList);
+                console.log(e.index)
+                this.xxyDealLoad(e.index)
             },
 
         }

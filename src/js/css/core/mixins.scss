@@ -102,3 +102,23 @@
     justify-content: flex-end;
     align-items:center;
 }
+
+// 新秀游宽高
+@mixin xxyWH($w,$h){
+	width: $w;
+	height: $h;
+}
+// 新秀游padding
+@mixin xxyPadding($t: 0,$b: 0,$l: 0,$r: 0){
+    padding-top: $t;
+    padding-bottom: $b;
+    padding-left: $l;
+    padding-right: $r;
+}
+// 新秀游margin
+@mixin xxyMargin($t: 0,$b: 0,$l: 0,$r: 0){
+    margin-top: $t;
+    margin-bottom: $b;
+    margin-left: $l;
+    margin-right: $r;
+}

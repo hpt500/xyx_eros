@@ -1,41 +1,4 @@
 export default {
-
-  tabTitles: [
-    {
-      title: '动态',
-      icon: 'https://gw.alicdn.com/tfs/TB1MWXdSpXXXXcmXXXXXXXXXXXX-72-72.png',
-      activeIcon: 'https://gw.alicdn.com/tfs/TB1kCk2SXXXXXXFXFXXXXXXXXXX-72-72.png',
-    },
-    {
-      title: '视频',
-      icon: 'https://gw.alicdn.com/tfs/TB1ARoKSXXXXXc9XVXXXXXXXXXX-72-72.png',
-      activeIcon: 'https://gw.alicdn.com/tfs/TB19Z72SXXXXXamXFXXXXXXXXXX-72-72.png'
-    },
-    {
-      title: '热点',
-      icon: 'https://gw.alicdn.com/tfs/TB1VKMISXXXXXbyaXXXXXXXXXXX-72-72.png',
-      activeIcon: 'https://gw.alicdn.com/tfs/TB1aTgZSXXXXXazXFXXXXXXXXXX-72-72.png'
-    },
-    
-  ],
-  tabStyles: {
-    bgColor: '#FFFFFF',
-    titleColor: '#666666',
-    activeTitleColor: '#3D3D3D',
-    activeBgColor: '#FFFFFF',
-    isActiveTitleBold: true,
-    iconWidth: 70,
-    iconHeight: 70,
-    width: 160,
-    height: 120,
-    fontSize: 24,
-    hasActiveBottom: true,
-    activeBottomColor: '#FFC900',
-    activeBottomHeight: 6,
-    activeBottomWidth: 120,
-    textPaddingLeft: 10,
-    textPaddingRight: 10
-  },
   // 使用 iconfont 模式的tab title配置
   tabIconFontTitles: [
     {
@@ -81,9 +44,36 @@ export default {
     activeBottomColor: '#148bc8',
     activeBottomHeight: 3,
     activeBottomWidth: 250,
-  }
+  },
+
+  // 新秀游动态数据
+  xxyAniMsg: [
+    {
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/06/151255429542275.jpg",
+      name:"元气封神",
+      score:"10"
+    },
+    {
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/12/151306444477500.jpg",
+      name:"佣兵对决",
+      score:"10"
+    },
+    {
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
+      name:"英魂之战",
+      score:"10"
+    }
+  ],
+
+  // 新秀游视频数据
+  xxyVidMsg: [
+    {},{},{},{},{}
+  ],
+
+  // 新秀游热点数据
+  xxyHotMsg: [
+    {},{}
+  ],
+
 }
 
-export const xxyGame = [
-
-]
