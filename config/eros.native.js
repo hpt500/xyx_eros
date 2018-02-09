@@ -1,5 +1,5 @@
 module.exports = {
-    'appName': 'erosDemo',
+    'appName': 'eros-yx-demo',
     'appBoard': '/config/index.js',
     // android 监听全局事件homeBack 如果为true 安卓端需要自行调用router.finish方法来关闭应用
     'androidIsListenHomeBack': 'true',
@@ -8,14 +8,14 @@ module.exports = {
         'iOS': '1.0.0'
     },
     'page': {
-        'homePage': '/pages/demo/index.js',
+        'homePage': '/pages/xxyproject/index.js',
         'mediatorPage': '/mediator/index.js',
-        'navBarColor': '#1DA1F2',
-        'navItemColor': '#ffffff'
+        'navBarColor': '#ffffff',
+        'navItemColor': '#333'
     },
     'url': {
         'jsServer': 'http://app.weex-eros.com:8889',
-        'image': 'https://lev-inf.benmu-health.com/test/xxx',
+        'image': 'https://oss.console.aliyun.com/bucket/oss-cn-shenzhen/img-xyx2/object?path=img%2F',
         'bundleUpdate': 'http://localhosts:3001/app/check',
         'debugServer': 'ws://app.weex-eros.com:8088/debugProxy/native'
     },
