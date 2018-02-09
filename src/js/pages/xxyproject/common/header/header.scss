@@ -1,0 +1,82 @@
+@import 'src/js/css/core/base.scss';
+.iconfont {
+    font-family: iconfont;
+}
+
+// 新秀游统一标题栏
+.xxyHeader{
+    position: fixed;
+    top: 0;
+    /*margin-top: 40;*/
+    left: 0;
+    right: 0;
+    height: 114px;
+    padding-top: 44px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 101;
+    background-color: $xxyColor;
+    opacity: .99;
+}
+.xxyHeader_scan,
+.xxyHeader_notice,
+.xxyHeader_center{
+    display: flex;
+    flex-direction: column;
+    @extend .flex-align;
+    height: 70px;
+}
+.xxyHeader_scan,
+.xxyHeader_notice {
+    width: 96px;
+}
+.xxyHeader_sic,
+.xxyHeader_ic,
+.xxyHeader_txt,
+.xxyHeader_search,
+.xxyHeader_title {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 300;
+}
+.xxyHeader_ic {
+    font-size: 32px;
+}
+.xxyHeader_sic {
+    font-size: 40px;
+}
+
+.xxyHeader_txt {
+    font-size: 18px;
+}
+
+.xxyHeader_search {
+    flex: 1;
+    height: 60px;
+    font-size: 26px;
+    padding-top: 13px;
+    color: #999999;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+
+// 新秀游标题栏logo
+.xxyHeader_center{
+    flex: 1;
+}
+.xxyHeader_logo{
+    width: 300px;
+    height: 60px;
+}
+.xxyHeader_title{
+    font-size: 40px;
+}
+
+
+// 新秀游搜索标题栏
+.xxyHeaderSearch{
+
+}

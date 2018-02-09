@@ -2,7 +2,9 @@
  * 这里编写 sass 之后，可在 vue 的 style 标签中通过 @import 相对路径引入
  * 注意 style 标签的 lang 属性需要设置为 scss/sass
  */
-$base-color: #1da1f2;
+//  新秀游颜色
+$base-color: #148bc8;
+$base-color_actice: #3bb5fc;
 
 .wrapper {
     flex-direction: row;
@@ -84,3 +86,7 @@ $base-color: #1da1f2;
     height: 68;
     width: 750;
 }
+
+// 新秀游统一css
+
+
