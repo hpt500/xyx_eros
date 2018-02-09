@@ -18,8 +18,7 @@
                     
                     <refresher @loadingDown="loadingDown" 
                                 @loadingAjax="loadingAjax" 
-                                :xxyKey="index"
-                                :ref="'refre'+index"></refresher>
+                                :xxyKey="index"></refresher>
                     <!--<cell class="border-cellborder-cell"></cell>-->
                     
                     <cell v-for="(demo,key) in v"
@@ -76,7 +75,6 @@
             }
         },
         created () {
-            this.init();
             this.tabPageHeight = Utils.env.getPageHeight()-70;
             this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
             Vue.set(this.tabList, this.hindex, this.demoList);
@@ -107,7 +105,7 @@
                 }
             },
             init(){
-                xxyAni();
+                // xxyAni();
             },
             // 新秀游动态
             xxyAni (){
