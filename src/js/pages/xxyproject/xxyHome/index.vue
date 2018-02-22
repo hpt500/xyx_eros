@@ -2,58 +2,52 @@
     <div class="xxy_wrapper xxyHome">       
         <xxy-header title_icon="http://www.xinxiuyou.com/static/img/top_logo2.png"></xxy-header>
         <div class="xxyHome_main">
-            
-           <wxc-tab-page ref="wxc-tab-page"
-                            :tab-titles="tabTitles"
-                            :tab-styles="tabStyles"
-                            title-type="fonticon"
-                            :needSlider="needSlider"
-                            :is-tab-view="isTabView"
-                            :tab-page-height="tabPageHeight"
-                            @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">    
-                <scroller v-for="(v,index) in tabList"
-                        :key="index" 
-                        class="item-container" offset-accuracy="300px" 
-                        :style="{ height: (tabPageHeight - tabStyles.height) + 'px' }">
-                    
-                    <refresher @loadingDown="loadingDown" 
-                                @loadingAjax="loadingAjax" 
-                                :xxyKey="index"></refresher>
-                    <!--<cell class="border-cellborder-cell"></cell>-->
-                    
-                    <div v-for="(demo,key) in v"
-                            class="xxyGameBox"
-                            :key="key">
-                        <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
-                                    url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
-                                    @wxcPanItemPan="wxcPanItemPan">
-                            <image :src="demo.pic" class="xxyGb_pic"></image>
-                            <div class="xxyGb_msg">
-                                <text>{{demo.name}}</text>
-                                <div class="xxyGb_score">
-                                    <!--新秀游评分-->
-                                    <image :src="'http://www.xinxiuyou.com/static/img/'+demo.score+'.png'" class="xxyGbs_star"></image>
-                                    <text class="xxyGbs_num">{{demo.score}}</text>
-                                </div>
-                            </div>
-                        </wxc-pan-item>
+            <xxy-tab :active-index="activeIndex" :menu="menuTex" @change="onchange"></xxy-tab>
+            <div style="flex:1;position:relative">
+                
+                    <scroller append="tree" class="xxyHome-list" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
+                    <!--<div class="xxyHomeList-page" :ref="'page_'+(index+1)" v-for="(item,index) in menuTex">
+
+                        <list class="xxyHomePageScro" :class="['xxyHPS'+(index+1)]" :showRefresh="true" @refresh="onrefresh">
+                            <cell>
+                                <text style="font-size:28px;">{{item.name}}</text>
+
+                            </cell>
+                            
+                        </list>
+
+                    </div>-->
+
+
+                    <div class="xxyHomeList-page" :ref="page_1">
+                        <xxy-home-ani :msg="menuTex[0]"></xxy-home-ani>
                     </div>
+                    <div class="xxyHomeList-page" :ref="page_2">
+                        <xxy-home-vid :msg="menuTex[1]"></xxy-home-vid>
+                    </div>
+                    <div class="xxyHomeList-page" :ref="page_3">
+                        <xxy-home-hot :msg="menuTex[2]"></xxy-home-hot>
+                    </div>
+
                 </scroller>
-               
-            </wxc-tab-page>
+
+            </div>
             
+          
 
         </div>
-         <!--<scroller class="xxyHome-list" offset-accuracy="300px">
-            <text style="font-size:50px;">首页</text>
-
-         </scroller>-->
     </div>
 </template>
 <script>
-    import xxy_header from "../common/header/xxyHeader.vue"
+    import xxyHeader from "../common/header/xxyHeader.vue"
     import refresher from '../common/refresh';
+    import xxyTab from "../common/tabSelect/xxyTab.vue"
 
+    import xxyHomeAni from './xxyHomeResource/xxyHomeAni.vue'
+    import xxyHomeVid from './xxyHomeResource/xxyHomeVid.vue'
+    import xxyHomeHot from './xxyHomeResource/xxyHomeHot.vue'
+
+    const SCROLL_FULL_WIDTH = 750
     const dom = weex.requireModule('dom');
     import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
 
@@ -63,34 +57,57 @@
 
 
     export default{
+        globalEvent: {
+            appActive() {
+                console.log('active')
+            },
+            appDeactive() {
+                console.log('deactive')
+            }
+        },
         data(){
             return {
-                // 当前索引
-                hindex : 0,
-
-                tabTitles: Config.tabIconFontTitles,
-                tabStyles: Config.tabIconFontStyles,
-                needSlider: true,
-                isTabView: true,
-                tabPageHeight: 1334,
-
-                tabList: [],
-                demoList: [],
-                supportSlide: true,
-                
+                activeIndex: 0,
+                menuTex: Config.xxyTabMsg,
+                noticeTop: 0,//通知栏的高度 待设
             }
         },
         created () {
-            this.tabPageHeight = Utils.env.getPageHeight()-70;
-            this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
-            this.init();
+            this.init();  
+            console.log(this.menuTex[0])
         },
         components: {
-            'xxy-header': xxy_header,
-            'refresher': refresher,
-            WxcTabPage, WxcPanItem,
+            xxyHeader, refresher, xxyTab, xxyHomeAni, xxyHomeVid, xxyHomeHot
+
         },
         methods: {
+            
+            // 二次改版tab切换
+            onchange(index){
+                dom.scrollToElement(this.$refs[`page_${index + 1}`])
+            },
+
+            onscroll(e) {
+                let formatOffset = Math.abs(e.contentOffset.x)
+                if( formatOffset % SCROLL_FULL_WIDTH === 0 ){
+                    this.activeIndex = formatOffset / SCROLL_FULL_WIDTH
+                }
+            },
+            onrefresh() {
+                console.log(122)
+                // setTimeout(function(){
+                //     console.log("123123")
+                //     this.$refs["list"].refreshEnd()
+                // },5000)
+                
+                    // 请求数据结束后调用 refreshEnd 方法
+                    //
+
+            },
+
+
+
+
             wxcTabPageCurrentTabSelected (e) {
                 console.log("切页")
                 console.log(e)
@@ -123,8 +140,7 @@
                 // }, error => {
 
                 // })
-                this.demoList[0] = Config.xxyAniMsg;
-                Vue.set(this.tabList, 0, this.demoList[0]);
+                this.menuTex[0].content = Config.xxyAniMsg;
 
             },
             // 新秀游视频
@@ -138,8 +154,7 @@
                 // }, error => {
 
                 // })
-                this.demoList[1] = Config.xxyVidMsg;
-                Vue.set(this.tabList, 1, this.demoList[1]);
+                this.menuTex[1].content = Config.xxyVidMsg;
             },
             // 新秀游热点
             xxyHot (){
@@ -152,8 +167,7 @@
                 // }, error => {
 
                 // })
-                this.demoList[2] = Config.xxyHotMsg;
-                Vue.set(this.tabList, 2, this.demoList[2]);
+                this.menuTex[2].content = Config.xxyHotMsg;
             },
             // 新秀游数据请求 
             xxyDealLoad (val){          

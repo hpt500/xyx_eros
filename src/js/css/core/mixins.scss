@@ -88,6 +88,10 @@
     flex-direction: row;
     @extend .flex-align;
 }
+.flex-column-center {
+    flex-direction: column;
+    @extend .flex-align;
+}
 .flex-row-between {
     flex-direction: row;
     justify-content: space-between;

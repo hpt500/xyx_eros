@@ -46,6 +46,22 @@ export default {
     activeBottomWidth: 250,
   },
 
+  // 新秀游顶部tab切换
+  xxyTabMsg: [
+    { 
+      name:"动态",
+      content:[],
+    },
+    { 
+      name:"视频",
+      content:[],
+    },
+    { 
+      name:"热点",
+      content:[],
+    },
+  ],
+
   // 新秀游动态数据
   xxyAniMsg: [
     {
