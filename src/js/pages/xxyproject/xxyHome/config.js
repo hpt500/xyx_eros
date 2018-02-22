@@ -49,12 +49,12 @@ export default {
   // 新秀游动态数据
   xxyAniMsg: [
     {
-      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/06/151255429542275.jpg",
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
       name:"元气封神",
       score:"10"
     },
     {
-      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/12/151306444477500.jpg",
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
       name:"佣兵对决",
       score:"10"
     },
