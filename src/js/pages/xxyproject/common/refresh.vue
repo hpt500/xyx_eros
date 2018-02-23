@@ -80,19 +80,22 @@ export default {
             this.loadingAni();
             this.refreshing = true;
 
-            setTimeout(() => {
-                this.stopAnimation = true
-                this.loadingAniDown();
-            }, 2000)
+            // setTimeout(() => {
+            //     this.stopAnimation = true
+            //     this.loadingAniDown();
+            // }, 2000)
 
             // 请求数据
             
-            
-            // const deal = this.xxyKey;
-            // this.$emit("loadingAjax",{
-            //     index:deal,
-            // })
-
+            const deal = this
+            this.$emit("loadingAjax",{
+                deal: deal
+            })
+        },
+        refreshend(){
+            console.log("回调成功")
+            this.stopAnimation = true
+            this.loadingAniDown();
         },
         onpullingdown(event) {}
     }

@@ -5,27 +5,27 @@
             <xxy-tab :active-index="activeIndex" :menu="menuTex" @change="onchange"></xxy-tab>
             <div style="flex:1;position:relative">
                 
-                    <scroller append="tree" class="xxyHome-list" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
+                <scroller class="xxyHome-list" paging-enabled="true" scroll-direction="horizontal" @scroll="onscroll" offset-accuracy="0">
                     <!--<div class="xxyHomeList-page" :ref="'page_'+(index+1)" v-for="(item,index) in menuTex">
 
-                        <list class="xxyHomePageScro" :class="['xxyHPS'+(index+1)]" :showRefresh="true" @refresh="onrefresh">
-                            <cell>
+                        <scroller class="xxyHomePageScro" :class="['xxyHPS'+(index+1)]">
+                        
+                            <div>
                                 <text style="font-size:28px;">{{item.name}}</text>
-
-                            </cell>
+                            </div>
                             
-                        </list>
+                        </scroller>
 
                     </div>-->
+ 
 
-
-                    <div class="xxyHomeList-page" :ref="page_1">
+                    <div class="xxyHomeList-page" ref="page_1">
                         <xxy-home-ani :msg="menuTex[0]"></xxy-home-ani>
                     </div>
-                    <div class="xxyHomeList-page" :ref="page_2">
+                    <div class="xxyHomeList-page" ref="page_2">
                         <xxy-home-vid :msg="menuTex[1]"></xxy-home-vid>
                     </div>
-                    <div class="xxyHomeList-page" :ref="page_3">
+                    <div class="xxyHomeList-page" ref="page_3">
                         <xxy-home-hot :msg="menuTex[2]"></xxy-home-hot>
                     </div>
 
@@ -73,8 +73,7 @@
             }
         },
         created () {
-            this.init();  
-            console.log(this.menuTex[0])
+            this.init(); 
         },
         components: {
             xxyHeader, refresher, xxyTab, xxyHomeAni, xxyHomeVid, xxyHomeHot
@@ -104,31 +103,13 @@
                     //
 
             },
-
-
-
-
-            wxcTabPageCurrentTabSelected (e) {
-                console.log("切页")
-                console.log(e)
-                const self = this;
-                this.hindex = e.page;
-                /* Unloaded tab analog data request */
-                if (!Utils.isNonEmptyArray(self.tabList[this.hindex])) {
-                    setTimeout(() => {
-                        this.xxyDealLoad(this.hindex)
-                    }, 100);
-                }
-            },
-            wxcPanItemPan (e) {
-                console.log(e)
-                if (Utils.env.supportsEBForAndroid()) {
-                    this.$refs['wxc-tab-page'].bindExp(e.element);
-                }
-            },
+            
             init(){
                 this.xxyAni();
+                this.xxyVid();
+                this.xxyHot();
             },
+
             // 新秀游动态
             xxyAni (){
                 // this.$fetch({
@@ -169,6 +150,26 @@
                 // })
                 this.menuTex[2].content = Config.xxyHotMsg;
             },
+
+            wxcTabPageCurrentTabSelected (e) {
+                console.log("切页")
+                console.log(e)
+                const self = this;
+                this.hindex = e.page;
+                /* Unloaded tab analog data request */
+                if (!Utils.isNonEmptyArray(self.tabList[this.hindex])) {
+                    setTimeout(() => {
+                        this.xxyDealLoad(this.hindex)
+                    }, 100);
+                }
+            },
+            wxcPanItemPan (e) {
+                console.log(e)
+                if (Utils.env.supportsEBForAndroid()) {
+                    this.$refs['wxc-tab-page'].bindExp(e.element);
+                }
+            },
+
             // 新秀游数据请求 
             xxyDealLoad (val){          
                 if(val==0){// 动态

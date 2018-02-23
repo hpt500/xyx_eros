@@ -1,18 +1,15 @@
 <template lang="">
     <div class="xxyHomeAni xxyHomePage">
+        <scroller class="xxyHomePageScro" offset-accuracy="300px">
+            <refresher @loadingDown="loadingDown" @loadingAjax="loadingAjax"></refresher>
+            <text style="font-size:28px; background-color:#ffffff">动态</text>
 
-        <scroller class="xxyHomePageScro xxyHPS1" offset-accuracy="300px">
-            <refresher></refresher>
-            <text style="font-size:28px;">动态</text>
-
-        </scroller>
-        
-        
+        </scroller>  
 
     </div>
 </template>
 <script>
-import refresher from '../../common/refresh';
+    import refresher from '../../common/refresh';
     export default{
         data(){
             return {
@@ -27,8 +24,26 @@ import refresher from '../../common/refresh';
                 }
             }
         },
+        created(){
+           
+        },
         components:{
             refresher,
+        },
+        methods:{
+            loadingDown(){
+
+            },
+            loadingAjax(e){
+                console.log("触发")
+                const ths = this.loadingAjax;
+                setTimeout(function(){
+                    console.log("进行回调")
+                    // this.$refs["scro"].refreshend();
+                    e.deal.stopAnimation = true;
+                    e.deal.loadingAniDown();
+                },2000)
+            }
         }
     }
 </script>
