@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import 'src/js/css/core/base.scss';
+
+.xxyGSearch{
+    position: relative;
+}
+
+// 搜索游戏
+.xxyGS{
+    width: 750px;
+    height: 140px;
+    display: flex;
+    @extend .flex-row-between;
+    background-color: $xxyColor;
+    @include xxyPadding(0,0,0,10);
+    padding-top: 60px;
+}
+.xxyGS_back{
+    width: 120px;
+    height: 60px;
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGS_form{
+    flex: 1;
+    height: 60px;
+    display: flex;
+    @extend .flex-row-center;
+    border-radius: 30px;
+    @include xxyPadding(6,6,6,6);
+    background-color: #0e6ea1;
+}
+.xxyGSF_input{
+    flex: 1;
+    height: 48px;
+    @include xxyPadding(0,0,20,20);
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGSF_button{
+    width: 100px;height: 48px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGS_list{
+    @include xxyPosition(140,0,0,0,absolute);
+}
+.xxyGSL_loding{
+    height: 100px;
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGSL_box{
+    display: flex;
+    @extend .flex-row-center;
+    @include xxyPadding(0,0,20,20)
+    margin-top:20;
+}
+.xxyGSLB_msg{
+    flex: 1;
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGSLBM_name{
+    flex: 1;
+    margin-left: 24px;
+}
+
+.xxyGSLB_button{
+    width: 150px;height:48px;
+    border-radius:24px;
+    background-color: #148bc8;
+    display: flex;
+    @extend .flex-row-center;
+}
+
+

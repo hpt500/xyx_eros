@@ -48,7 +48,7 @@
     font-weight: $btn-fw;
     vertical-align: middle;
 }
-@mixin abs-pos($top: 0, $right: 0, $bottom: 0, $left: 0){
+@mixin abs-pos($top: 0, $bottom: 0, $left: 0, $right: 0 ){
     top: $top;
     right: $right;
     bottom: $bottom;
@@ -88,6 +88,10 @@
     flex-direction: row;
     @extend .flex-align;
 }
+.flex-column-center {
+    flex-direction: column;
+    @extend .flex-align;
+}
 .flex-row-between {
     flex-direction: row;
     justify-content: space-between;
@@ -121,4 +125,12 @@
     margin-bottom: $b;
     margin-left: $l;
     margin-right: $r;
+}
+// 新秀游定位
+@mixin xxyPosition($top: 0, $bottom: 0, $left: 0, $right: 0 ,$type: relative){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: $type;
 }

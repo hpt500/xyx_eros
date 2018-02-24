@@ -13,6 +13,8 @@ module.exports = {
         "js/pages/xxyproject/xxyRank/index.vue",
         "js/pages/xxyproject/xxyForum/index.vue",
         "js/pages/xxyproject/xxyPersonal/index.vue",
+        // 新秀游搜索游戏界面
+        "js/pages/xxyproject/xxyGSearch/search.vue",
 
         "js/pages/xxyproject/home/index.vue",
         "js/pages/xxyproject/topic/index.vue",
@@ -20,6 +22,7 @@ module.exports = {
         "js/pages/xxyproject/shop/index.vue",
         "js/pages/xxyproject/my/index.vue",
         "js/pages/xxyproject/shop/a.vue",
+
 
     ],
     'alias': {

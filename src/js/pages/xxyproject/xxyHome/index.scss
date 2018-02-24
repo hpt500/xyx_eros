@@ -2,18 +2,40 @@
 @import 'src/js/css/core/base.scss';
 
 .xxyHome{
-    
+    background-color: #f4f3f3;
 }
-.xxyHome-list{
-    position: fixed;
-    top: 114px;
-    bottom: 90px;
-    left: 0;right: 0;
 
-}
 .xxyHome_main{
     position: fixed;
     left: 0;right: 0;top: 0;bottom: 0;
-    padding-top: 114px;
+    padding-top: 140px;
     padding-bottom: 90px; 
+    @extend .flex-column;
+}
+.xxyHome-list{
+    flex: 1;
+    flex-direction: row;
+    // background-color: #3bb5fc;
+}
+.xxyHomeList-page{
+    width: 750px;
+    position: relative;
+}
+.xxyHomePage{
+    position: absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    display: flex;
+}
+.xxyHomePageScro{
+    flex: 1;
+    flex-direction: column;
+}
+.xxyHPS1{
+    background-color: red;
+}
+.xxyHPS2{
+    background-color: purple;
+}
+.xxyHPS3{
+    background-color: greenyellow;
 }
