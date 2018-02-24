@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.iconfont {
+    font-family: iconfont;
+}
+
 // 新秀游特有类
 
 $xxyColor: #148bc8;
@@ -42,4 +46,14 @@ $xxyColor999: #999;
 }
 
 // 新秀游顶部tab切换
+
+// 新秀游常规按钮
+.xxybtn{
+    color: #ffffff;
+    background-color: #148bc8;
+    font-size: 28px;
+}
+
+
+
 

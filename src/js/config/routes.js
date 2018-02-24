@@ -7,6 +7,10 @@
 export default {
     'a': {
         title: '路由测试页',
-        url: '/pages/yanxuanDemo/shop/a.js'
+        url: '/pages/xxyproject/shop/a.js'
+    },
+    'xxyGSearch': {
+        // title: '搜索游戏',
+        url: '/pages/xxyproject/xxyGSearch/search.js'
     }
 }

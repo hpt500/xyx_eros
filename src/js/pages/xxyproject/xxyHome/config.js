@@ -67,7 +67,7 @@ export default {
     {
       pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
       name:"元气封神",
-      score:"10"
+      score:"8"
     },
     {
       pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
@@ -77,7 +77,7 @@ export default {
     {
       pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
       name:"英魂之战",
-      score:"10"
+      score:"9"
     }
   ],
 
