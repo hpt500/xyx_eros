@@ -29,7 +29,6 @@ export default {
         debugger
         util.initIconFont();
         this.$storage.set('xxyType', weex.config.env).then(resData => {}, error => {})
-        console.log(1524354654654)
     },
     data() {
         return {

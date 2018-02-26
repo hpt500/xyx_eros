@@ -29,7 +29,6 @@ export default {
     ],
     components: { WxcMinibar },
     created() {
-        this.xxySearch();
     },
     methods: {
         jumpWeb(_url) {
