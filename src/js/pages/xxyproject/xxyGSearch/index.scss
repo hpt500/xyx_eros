@@ -46,8 +46,14 @@
 }
 .xxyGS_list{
     @include xxyPosition(140,0,0,0,absolute);
+    @include xxyPadding(10,10,10,10);
 }
 .xxyGSL_loding{
+    height: 100px;
+    display: flex;
+    @extend .flex-row-center;
+}
+.xxyGSL_no{
     height: 100px;
     display: flex;
     @extend .flex-row-center;
@@ -55,8 +61,7 @@
 .xxyGSL_box{
     display: flex;
     @extend .flex-row-center;
-    @include xxyPadding(0,0,20,20)
-    margin-top:20;
+    @include xxyPadding(10,10,10,10);
 }
 .xxyGSLB_msg{
     flex: 1;

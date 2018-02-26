@@ -37,12 +37,14 @@ new Widget({
          */
         responseHandler (options, resData, resolve, reject) {
             const { status, errorMsg, data } = resData
+  
             if (status !== 200) {
                 console.log(`invoke error status: ${status}`)
                 console.log(`invoke error message: ${errorMsg}`)
                 reject(resData)
             } else {
                 // 自定义请求逻辑
+
                 resolve(data)
             }
         }

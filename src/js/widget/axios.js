@@ -43,11 +43,11 @@ export default class Axios {
 
         function handleAxios ({ name, url = '', data, method, header }, resolve, reject) {
             bmAxios.fetch({
-                url: url || (self.baseUrl + self.apis[name]),
+                url: url || ("http://www.xinxiuyou.com/" + self.apis[name]),
                 data: data || {},
                 method: method || 'GET',
                 header: header || {},
-                timeout: self.timeout || 30000
+                timeout: self.timeout || 30000,
             }, (resData) => {
                 // 统一的监控
                 if (_isFunction(self.responseHandler)) {
