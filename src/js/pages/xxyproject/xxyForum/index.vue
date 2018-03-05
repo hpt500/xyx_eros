@@ -1,6 +1,10 @@
 <template lang="">
     <div class="xxy_wrapper xxyForum">       
-        <xxy-header title="讨论"></xxy-header>
+        <xxy-header title="讨论" 
+                    left_type="search"
+                    right_type="notice"
+                    center_if=true
+                    bgColor="#148bc8"></xxy-header>
         
         
         

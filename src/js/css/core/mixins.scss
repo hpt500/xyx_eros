@@ -107,6 +107,19 @@
     align-items:center;
 }
 
+.flex-row-align-end{
+    align-items: flex-end;
+}
+.flex-row-just-center{
+    align-items: center;
+}
+.flex-row-align-center{
+    align-items: center;
+}
+
+.posi-rel{
+    position: relative;
+}
 // 新秀游宽高
 @mixin xxyWH($w,$h){
 	width: $w;
@@ -134,3 +147,6 @@
     left: $left;
     position: $type;
 }
+
+
+// 新秀游板块包含导航|tab切换

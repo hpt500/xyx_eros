@@ -1,17 +1,6 @@
 @charset "utf-8";
 @import 'src/js/css/core/base.scss';
 
-.xxyHome{
-    background-color: #f4f3f3;
-}
-
-.xxyHome_main{
-    position: fixed;
-    left: 0;right: 0;top: 0;bottom: 0;
-    padding-top: 140px;
-    padding-bottom: 90px; 
-    @extend .flex-column;
-}
 .xxyHome-list{
     flex: 1;
     flex-direction: row;
@@ -22,8 +11,7 @@
     position: relative;
 }
 .xxyHomePage{
-    position: absolute;
-    left: 0;right: 0;top: 0;bottom: 0;
+    @include xxyPosition(0,0,0,0,absolute);
     display: flex;
 }
 .xxyHomePageScro{

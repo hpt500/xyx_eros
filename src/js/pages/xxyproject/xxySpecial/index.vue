@@ -1,6 +1,9 @@
 <template lang="">
     <div class="xxy_wrapper xxySpecial">       
-        <xxy-header title="专题"></xxy-header>
+        <xxy-header title="专题" 
+                    left_type="search"
+                    right_type="notice"
+                    center_if=true></xxy-header>
         <list class="list" ref="list" :showRefresh="true" @refresh="onrefresh">
             <cell class="listcell">
                 <div class="lc_content">

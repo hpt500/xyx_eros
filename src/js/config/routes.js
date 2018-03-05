@@ -12,5 +12,14 @@ export default {
     'xxyGSearch': {
         // title: '搜索游戏',
         url: '/pages/xxyproject/xxyGSearch/search.js'
-    }
+    },
+    'login': {
+        // title: '登录',
+        url: '/pages/xxyproject/xxyPersonal/login.js'
+    },
+    'register': {
+        // title: '新用户注册',
+        url: '/pages/xxyproject/xxyPersonal/register.js'
+    },
+    
 }

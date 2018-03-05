@@ -8,7 +8,8 @@ let utilFunc = {
         domModule.addRule('fontFace', {
             'fontFamily': "iconfont",
             // 'src': "url('bmlocal://iconfont/xxy_iconfont.ttf')"
-            'src': "url('//at.alicdn.com/t/font_564353_3yet7xkv515uerk9.ttf')"
+            'src': "url('//at.alicdn.com/t/font_564353_x09blf6hct3p7gb9.ttf')"
+            
         });
     },
     setBundleUrl(url, jsFile) {

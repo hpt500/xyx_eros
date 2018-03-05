@@ -15,6 +15,13 @@ module.exports = {
         "js/pages/xxyproject/xxyPersonal/index.vue",
         // 新秀游搜索游戏界面
         "js/pages/xxyproject/xxyGSearch/search.vue",
+        // 新秀游个人中心界面体系
+        "js/pages/xxyproject/xxyPersonal/login.vue",
+        "js/pages/xxyproject/xxyPersonal/register.vue",
+        "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/fans.vue",
+        "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/follow.vue",
+        "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/played.vue",
+        "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/posted.vue",
 
         "js/pages/xxyproject/home/index.vue",
         "js/pages/xxyproject/topic/index.vue",

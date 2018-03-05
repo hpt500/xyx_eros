@@ -3,6 +3,10 @@
 .iconfont {
     font-family: iconfont;
 }
+// 背景统一类
+.xxy_wrapper{
+    background-color: #f4f3f3;
+}
 
 // 新秀游特有类
 
@@ -13,6 +17,42 @@ $xxyColorHover: #3bb5fc;
 $xxyColor333: #333;
 // 基本浅灰色
 $xxyColor999: #999;
+
+.xxyColor{
+    color: $xxyColor;
+}
+.xxyColorActive{
+    color: $xxyColorHover;
+}
+.xxyColorfff{
+    color: #ffffff;
+}
+.xxyColor333{
+    color: $xxyColor333;
+}
+.xxyColor535{
+    color: #535353;
+}
+.xxyColor7f7{
+    color: #7f7f7f;
+}
+.xxyColor999{
+    color: $xxyColor999;
+}
+// 白色背景
+.xxyBgfff{
+    background-color: #ffffff;
+}
+// 新秀游模拟阴影 -全
+.xxyBoxShaow-small{
+    @include border-all(#efefef,solid,2)
+}
+// 新秀游模拟阴影 -部
+@mixin xxyBoxShaow-small-bf($direction: top){
+    @include border($direction,#efefef,solid,2)
+}
+
+
 
 // 新秀游游戏板块
 .xxyGameBox{
@@ -51,7 +91,18 @@ $xxyColor999: #999;
 .xxybtn{
     color: #ffffff;
     background-color: #148bc8;
-    font-size: 28px;
+    @include xxyPadding(0,0,20,20)
+}
+
+// 新秀游主要板块类 全面屏
+.xxyMain_hasDh_hasRout{
+    @include xxyPosition(0,0,0,0,fixed);
+    @include xxyPadding(140,90,0,0);
+    @extend .flex-column;
+}
+.xxyMain_hasDh{
+    @include xxyPosition(0,0,0,0,fixed);
+    @include xxyPadding(140,0,0,0)
 }
 
 

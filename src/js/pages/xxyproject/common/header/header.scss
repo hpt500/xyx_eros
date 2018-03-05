@@ -8,7 +8,9 @@
     height: 140px;
     display: flex;
     @extend .flex-align;
-    background-color: $xxyColor;
+    position: fixed;
+    left: 0;right: 0;top: 0;
+    // background-color: $xxyColor;
     padding-top: 60px;
 }
 .xxyHeader_scan,
@@ -21,7 +23,13 @@
 }
 .xxyHeader_scan,
 .xxyHeader_notice {
-    width: 50px;
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+}
+.xxyHeader_scan_opcity{
+    background-color: rgba(0, 0, 0, 0.5);
+
 }
 .xxyHeader_sic,
 .xxyHeader_ic,
