@@ -5,13 +5,15 @@
 // 新秀游统一标题栏
 .xxyHeader{
     width: 750px;
-    height: 140px;
-    display: flex;
-    @extend .flex-align;
     position: fixed;
     left: 0;right: 0;top: 0;
     // background-color: $xxyColor;
-    padding-top: 60px;
+    // padding-top: 60px;
+}
+.xxyHeaderMain{
+    display: flex;
+    @extend .flex-align;
+    height: 100px;
 }
 .xxyHeader_scan,
 .xxyHeader_notice,

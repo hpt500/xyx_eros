@@ -13,6 +13,12 @@ export default {
         // title: '搜索游戏',
         url: '/pages/xxyproject/xxyGSearch/search.js'
     },
+    //  消息通知
+    'xxyNotice': {
+        title: '消息通知',
+        url: '/pages/xxyproject/xxyNotice/notice.js'
+
+    },
     'login': {
         // title: '登录',
         url: '/pages/xxyproject/xxyPersonal/login.js'
@@ -21,5 +27,40 @@ export default {
         // title: '新用户注册',
         url: '/pages/xxyproject/xxyPersonal/register.js'
     },
+
+    // 个人中心处的路由界面
+
+    // -任务界面
+    'perTask':{
+        title: '我的任务',
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/task.js'
+    },
+    // -编辑资料
+    'perEdit':{
+        title: '编辑资料',
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/edit.js'
+    },
+    // -用户设置
+    'perSet':{
+        title: '我的设置',
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/set.js'
+    },
+    //  我的粉丝
+    'perFans':{
+        title: "我的粉丝",
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/fans.js'
+    },
+    //  我的关注
+    'perFollow':{
+        title: "我的关注",
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/follow.js'
+    },
+    //  我玩过的游戏
+    'perPlayed':{
+        title: "我玩过的游戏",
+        url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/played.js'
+    }
+
+
     
 }

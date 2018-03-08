@@ -1,23 +1,28 @@
 <template>
     <div class="xxyHeader xxyHeaderSearch" :style="{'background-color':'rgba(20,139,200,'+(bgColorOp||'1')+')'}">
-        <wxc-minibar :background-color="'rgba(20,139,200,'+(bgColorOp||'1')+')'">
-            <div class="xxyHeader_scan xxyHLeft" @click="xxyLeft" slot="left">
-                <text class="xxyHeader_sic iconfont">{{
-                    left_type=="search"?"&#xe65c;":
-                    (left_type=="back"?"&#xe679;":
-                    "")}}</text>
-            </div>
-            <div class="xxyHeader_center" slot="middle">
-                <text class="xxyHeader_title" v-if="(xxyTitleImg&&xxyTitleBool)">{{title}}</text>
-                <image v-if="(!xxyTitleImg&&xxyTitleBool)" :src="title_icon" class="xxyHeader_logo"></image>
-            </div>
-            <div class="xxyHeader_scan xxyHright" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']" @click="xxyRight" slot="right">
-                <text class="xxyHeader_sic iconfont" >{{
-                    right_type=="notice"?"&#xe70a;":
-                    (right_type=="setup"?"&#xe7fb;":
-                    "")}}</text>
-            </div>
-        </wxc-minibar>
+        <div class="app-notice" :style="{'height':appNoticeHeight + 'px',
+        'background-color':'rgba(20,139,200,'+(bgColorOp||'1')+')'}"></div>
+        <div class="xxyHeaderMain">
+            <wxc-minibar :background-color="'rgba(20,139,200,'+(bgColorOp||'1')+')'">
+                <div class="xxyHeader_scan xxyHLeft" @click="xxyLeft" slot="left">
+                    <text class="xxyHeader_sic iconfont">{{
+                        left_type=="search"?"&#xe65c;":
+                        (left_type=="back"?"&#xe679;":
+                        "")}}</text>
+                </div>
+                <div class="xxyHeader_center" slot="middle">
+                    <text class="xxyHeader_title" v-if="(xxyTitleImg&&xxyTitleBool)">{{title}}</text>
+                    <image v-if="(!xxyTitleImg&&xxyTitleBool)" :src="title_icon" class="xxyHeader_logo"></image>
+                </div>
+                <div class="xxyHeader_scan xxyHright" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']" @click="xxyRight" slot="right">
+                    <text class="xxyHeader_sic iconfont" >{{
+                        right_type=="notice"?"&#xe70a;":
+                        (right_type=="setup"?"&#xe7fb;":
+                        "")}}</text>
+                </div>
+            </wxc-minibar>
+        </div>
+        
     </div>
 </template>
 <script>
@@ -28,6 +33,7 @@ export default {
         return {
             xxyTitleImg : this.title_icon==undefined?true:false,
             xxyTitleBool: this.center_if=='true'?true:false,
+            appNoticeHeight: 40,
         }
     },
     props:[
@@ -35,8 +41,9 @@ export default {
     ],
     components: { WxcMinibar },
     created() {
-        console.log(123412345545)
-        console.log(this.xxyTitleBool)
+        this.$storage.get('xxyType').then(resData => {
+            this.appNoticeHeight = resData.statusBarHeight;
+        })
     },
     methods: {
         jumpWeb(_url) {
@@ -57,16 +64,14 @@ export default {
                 case 'search'://搜索
                     this.$router.open({
                         name: 'xxyGSearch',
-                        type: 'PUSH'
+                        type: 'PUSH',
+                        statusBarStyle: 'LightContent'
                     })
                     break;
                 case 'back'://返回
                     this.$router.back({
                         length: 1,
                         type: 'PUSH',
-                        callback() {
-                            // 返回成功回调
-                        }
                     })
                     break;
             }
@@ -75,10 +80,17 @@ export default {
         xxyRight(){
             switch(this.right_type){
                 case 'notice'://通知
-                    
+                    this.$router.open({
+                        name: 'xxyNotice',
+                        type: 'PUSH',
+                        navShow: false,
+                    })
                     break;
                 case 'setup'://设置
-                    
+                    this.$router.open({
+                        name: 'perSet',
+                        type: 'PUSH'
+                    })
                     break;
             }
         },

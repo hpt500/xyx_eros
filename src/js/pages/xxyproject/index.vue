@@ -1,7 +1,7 @@
 <template>
     <div class="app-wrapper">
         
-        <embed v-for="(item,index) in items" :src="item.src" type="weex" class="content" :style="{ visibility: item.visibility }"></embed>
+        <embed v-for="(item,index) in items" :src="item.src" type="weex" class="content" :style="{ visibility: item.visibility}"></embed>
         <tab-bar @tabTo="onTabTo" :items="items"></tab-bar>
         <div class="touch-bar"></div>
     </div>
@@ -23,7 +23,7 @@ export default {
         }
     },
     components: {
-        'tab-bar': tabBar,
+        tabBar,
     },
     created() {
         debugger
@@ -33,6 +33,7 @@ export default {
     data() {
         return {
             items: tabConfig,
+            
         }
     },
     methods: {
@@ -71,7 +72,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    margin-top: 0;
     /*margin-bottom: 100;*/
 }
 

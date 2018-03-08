@@ -3,8 +3,8 @@
         <xxy-header title_icon="http://www.xinxiuyou.com/static/img/top_logo2.png" 
                     left_type="search"
                     right_type="notice"
-                    center_if=true></xxy-header>
-        <div class="xxyMain_hasDh_hasRout">
+                    center_if=true ref="hhh"></xxy-header>
+        <div class="xxyMain_hasDh_hasRout" :style="{'paddingTop':dhTop+'px'}">
             <xxy-tab :active-index="activeIndex" :menu="menuTex" @change="onchange"></xxy-tab>
             <div style="flex:1;position:relative">
                 
@@ -68,11 +68,15 @@
             return {
                 activeIndex: "0",
                 menuTex: Config.xxyTabMsg,
-                noticeTop: 0,//通知栏的高度 待设
+                dhTop: 140,//通知栏的高度 待设
             }
         },
         created () {
             this.init(); 
+            this.$storage.get('xxyType').then(resData => {
+                console.log("12313123123")
+                this.dhTop = Number(resData.statusBarHeight) + 100;
+            })
         },
         components: {
             xxyHeader, refresher, xxyTab, xxyHomeAni, xxyHomeVid, xxyHomeHot

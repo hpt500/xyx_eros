@@ -32,7 +32,7 @@ export default {
         }
     },
     created(){
-        this.tabTo("xxyPersonal")
+        // this.tabTo("xxyPersonal")
     },
     methods: {
         tabTo(_key) {

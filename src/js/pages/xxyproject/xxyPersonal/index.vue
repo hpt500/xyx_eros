@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="xxyPMT_btn">
-                        <text class="xxybtn fs24 line-height40 br20">编辑资料</text>
+                        <text class="xxybtn fs24 line-height40 br20" @click="xxyPerFn('perEdit')">编辑资料</text>
                         <!--<text class="xxybtn fs24 line-height40 br20 mt10">礼仪考试</text>-->
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                     <div class="xxyPME_dj xxyBoxShaow-small mb20">
                         <div class="xxyPMED_title">
                             <text class="fs28 xxyColor535">用户等级</text>
-                            <text class="fs28 xxyColor">成长任务</text>
+                            <text class="fs28 xxyColor" @click="xxyPerFn('perTask')">成长任务</text>
                         </div>
                         <div class="xxyPMED_group">
                             <div class="xxyPMEDG_top flex-row flex-row-between">
@@ -58,7 +58,7 @@
                     <!--按钮板块-->
                     <div class="xxyPME_alink flex-row">
                         
-                        <div class="xxyPMEA_box flex flex-column xxyBoxShaow-small" :class="[index==1?'xxyPMEA_box_2':'']" v-for="(item,index) in userMsg.userflo">
+                        <div class="xxyPMEA_box flex flex-column xxyBoxShaow-small" :class="[index==1?'xxyPMEA_box_2':'']" v-for="(item,index) in userMsg.userflo" @click="xxyPerFn(item.title)">
                             <text class="fs48 xxyColor7f7 xxyTex-center line-height68">{{item.num}}</text>
                             <text class="fs28 xxyColor999 xxyTex-center">{{item.type}}</text>
                         </div>
@@ -135,6 +135,16 @@
                     this.activeIndex = formatOffset / SCROLL_FULL_WIDTH
                 }
             },
+            // 以下路由可能需要传递参数并在其界面created中进行数据请求03.06
+            xxyPerFn(page){
+                // 根据索引判断路由界面
+                console.log(page)
+
+                this.$router.open({
+                    name: page,
+                    type: 'PUSH'
+                })
+            }
         }
         
     }

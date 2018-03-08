@@ -108,20 +108,24 @@ export default{
         },
         userflo:[
             {
+                title:"perPlayed",
                 type:"玩过的游戏",
                 num: "5"
             },
             {
+                title:"perFollow",
                 type:"我的关注",
                 num: "20"
             },
             {
+                title:"perFans",
                 type:"我的粉丝",
                 num: "10"
             }
         ],
         userset:[
             {
+                title:"perEdit",
                 type:"编辑资料",
                 icon:""
             }
