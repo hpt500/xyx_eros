@@ -1,7 +1,10 @@
 <template lang="">
     <div class="xxy_wrapper xxyHome">       
-        <xxy-header title_icon="http://www.xinxiuyou.com/static/img/top_logo2.png"></xxy-header>
-        <div class="xxyHome_main">
+        <xxy-header title_icon="http://www.xinxiuyou.com/static/img/top_logo2.png" 
+                    left_type="search"
+                    right_type="notice"
+                    center_if=true ref="hhh"></xxy-header>
+        <div class="xxyMain_hasDh_hasRout" :style="{'paddingTop':dhTop+'px'}">
             <xxy-tab :active-index="activeIndex" :menu="menuTex" @change="onchange"></xxy-tab>
             <div style="flex:1;position:relative">
                 
@@ -13,12 +16,8 @@
                             <div>
                                 <text style="font-size:28px;">{{item.name}}</text>
                             </div>
-                            
                         </scroller>
-
                     </div>-->
- 
-
                     <div class="xxyHomeList-page" ref="page_1">
                         <xxy-home-ani :msg="menuTex[0]"></xxy-home-ani>
                     </div>
@@ -40,7 +39,7 @@
 </template>
 <script>
     import xxyHeader from "../common/header/xxyHeader.vue"
-    import refresher from '../common/refresh';
+    import refresher from '../common/refresh'
     import xxyTab from "../common/tabSelect/xxyTab.vue"
 
     import xxyHomeAni from './xxyHomeResource/xxyHomeAni.vue'
@@ -67,13 +66,17 @@
         },
         data(){
             return {
-                activeIndex: 0,
+                activeIndex: "0",
                 menuTex: Config.xxyTabMsg,
-                noticeTop: 0,//通知栏的高度 待设
+                dhTop: 140,//通知栏的高度 待设
             }
         },
         created () {
             this.init(); 
+            this.$storage.get('xxyType').then(resData => {
+                console.log("12313123123")
+                this.dhTop = Number(resData.statusBarHeight) + 100;
+            })
         },
         components: {
             xxyHeader, refresher, xxyTab, xxyHomeAni, xxyHomeVid, xxyHomeHot

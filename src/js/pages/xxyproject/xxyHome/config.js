@@ -40,7 +40,7 @@ export default {
 
     bottomColor: "#d4d4d4",
     bottomHeight: 2,
-
+    
     activeBottomColor: '#148bc8',
     activeBottomHeight: 3,
     activeBottomWidth: 250,

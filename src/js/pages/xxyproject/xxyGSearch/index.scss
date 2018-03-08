@@ -8,13 +8,16 @@
 // 搜索游戏
 .xxyGS{
     width: 750px;
-    height: 140px;
+}
+
+.xxyGS_input{
+    height: 100px;
     display: flex;
     @extend .flex-row-between;
     background-color: $xxyColor;
     @include xxyPadding(0,0,0,10);
-    padding-top: 60px;
 }
+
 .xxyGS_back{
     width: 120px;
     height: 60px;

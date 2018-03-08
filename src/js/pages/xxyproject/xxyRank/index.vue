@@ -1,6 +1,9 @@
 <template lang="">
     <div class="xxy_wrapper xxyRank">       
-        <xxy-header title="排行"></xxy-header>
+        <xxy-header title="排行" 
+                    left_type="search"
+                    right_type="notice"
+                    center_if=true></xxy-header>
         
         
         

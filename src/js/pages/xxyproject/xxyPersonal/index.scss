@@ -1,1 +1,233 @@
+@charset "utf-8";
 @import 'src/js/css/core/base.scss';
+
+// 个人中心界面设计
+.xxyPerMain{
+    @include xxyPadding(300,0,0,0);
+}
+// 头像背景
+.xxyPerTop{
+    position: fixed;
+    top: 300px;
+}
+.xxyPerBg{
+    width: 750;height: 300px;
+    background-color: #3bb5fc;
+}
+.xxyZheZ{
+    @include xxyPosition(0,0,0,0,absolute);
+    background-color: #ffffff;
+    filter: blur(50px);
+    opacity: .7;
+}
+.xxyPerSetup{
+    @include xxyPadding(15,15,15,15);
+    @include xxyPosition(80,auto,auto,20,absolute);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+.xxyPSetup_tex{
+    font-size: 50px;
+    color: #ffffff;
+}
+// 个人基本信息
+.xxyPerMsg{
+    
+}
+.xxyPM_top{
+    @include xxyPadding(20,20,20,20);
+    @extend .flex-row;
+    background-color: #ffffff;
+    @include xxyBoxShaow-small-bf(bottom)
+}
+// 个人头像图标
+.xxyPMT_icon{
+    width: 100px;height: 100px;
+    border-radius: 50px;
+}
+// 个人其他信息
+.xxyPMT_each{
+}
+// 个人名称及其等级
+.xxyPMT_user{
+}
+.xxyPMT_name{
+}
+.xxyPMT_dj{
+    width: 42px;
+    height: 48px;
+}
+// 个人id
+.xxyPMT_id{
+}
+.xxyPMT_id_tex{
+}
+
+// 其他个人信息
+.xxyPM_each{
+    
+    @include xxyPadding(20,20,20,20);
+}
+// 等级积分板块
+.xxyPME_dj{
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.xxyPMED_title{
+    height: 60px;
+    @extend .flex-row;
+    align-items: center;
+    @include xxyPadding(0,0,20,20);
+    justify-content: space-between;
+    @include border(bottom,#e0e0e0,solid,2)
+}
+.xxyPMED_group{
+    @include xxyPadding(20,20,20,20)
+}
+.xxyPMEDGT_right{
+    width: 220px;
+    background-color: #5bc5e5;
+    border-radius: 16px;
+    @include xxyPadding(15,15,20,20);
+}
+
+// 按钮板块 myfans myfollow mypalyed
+.xxyPMEA_box{
+    background-color: #ffffff;
+    border-radius: 20px;
+    @include xxyPadding(15,15,15,15);
+}
+.xxyPMEA_box_2{
+    @include xxyMargin(0,0,20,20);
+}
+
+
+
+
+
+
+
+
+
+
+// 登录注册界面--路由
+.xxyLR{
+    @extend .flex-column;
+}
+.xxyLR_main{
+    flex:1;
+    // background-color: #FFFFFF;
+    @extend .flex-column;
+    // align-items: center;
+    // @include xxyPadding(0,0,20,20)
+}
+.xxyLRM_logo{
+    @include xxyMargin(120,20,0,0);
+    @extend .flex-row;
+    @extend .flex-align;
+}
+
+.xxyLRM_list{
+    width: 750px;height: 400px;
+    // background-color: greenyellow;
+    @extend .flex-row;
+    @include xxyPadding(20,20,20,20)
+}
+.xxyLRM_bottom{
+    flex: 1;
+    // background-color: yellow;
+    @extend .flex-column;
+    justify-content: space-between;
+}
+.xxyLR_input{
+    height: 70px;
+    @extend .flex-row;
+    @extend .flex-align;
+    // background-color: #3bb5fc;
+    
+    border-bottom-style: solid;
+    border-bottom-width: 2;
+}
+.xxyLR_input_on{
+    border-bottom-color: #148bc8;
+}
+.xxyLR_input_default{
+    border-bottom-color: #bebebe;
+}
+.xxyLR_input_mb{
+    margin-bottom: 40px;
+}
+.xxyLRI_type{
+    font-size: 36px;
+    color: #666666;
+    margin-right: 30;
+    margin-top: 5px;
+}
+.xxyLRI_input{
+    flex:1;
+    font-size: 36px;
+    height: 46px;
+    color: #333333;
+}
+.xxyLRI_btn{
+    font-size: 44px;
+    color: #999999;
+    width: 60px;
+    margin-top: 5px;
+}
+
+
+// 响应按钮
+.xxyLRMB_btn{
+    @extend .flex-row;
+    @extend .flex-align;
+    height: 100px;
+    border-radius: 10px;
+    
+}
+.xxyLRMB_btn_on{
+    background-color: #148bc8;
+}
+.xxyLRMB_btn_default{
+    background-color: #d4d4d4;
+}
+.xxyLRMBB_tex{
+    color: #ffffff;
+    font-size: 36px;
+    
+}
+
+.xxyLR_gologin{
+
+    @extend .flex-row;
+    justify-content: flex-end;
+}
+.xxyLR_gologin_tex{
+    font-size: 32px;
+    color: #148bc8;
+}
+
+
+.xxyEachLogin{
+    @include xxyPadding(40,40,40,40);
+    // background-color: yellow;
+    @extend .flex-row;
+    justify-content: space-around;
+    align-items: center;
+}
+.xxyEL_box{
+    width: 150px;
+    @extend .flex-column;
+    align-items: center;
+}
+
+.xxyELB_icon{
+
+    font-size: 90px;
+    color: #3bb5fc;
+}
+.xxyELB_name{
+    font-size: 28px;
+    color: #3bb5fc;
+    margin-top: 10px;
+}

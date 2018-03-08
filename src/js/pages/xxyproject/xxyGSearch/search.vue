@@ -18,19 +18,25 @@
                     <text style="color:#999999;font-size:28px;">搜索</text>
                 </div>
            </div>-->
-           <wxc-searchbar ref="wxc-searchbar" 
-                        autofocus="true"
-                        placeholder="搜索新秀游戏"
-                        always-show-cancel="true"
-                        theme="148bc8"
-                        @wxcSearchbarCancelClicked="xxySearchCancle"
-                        @wxcSearchbarInputReturned="xxySearchReturn"
-                        @wxcSearchbarInputOnInput="xxySearchInput"
-                        @wxcSearchbarCloseClicked="xxySearchColse"
-                        @wxcSearchbarInputOnFocus="xxySearchFocus"
-                        @wxcSearchbarInputOnBlur="xxySearchBlur"></wxc-searchbar>
+           <div class="app-notice" :style="{'height':appNoticeHeight + 'px'}"></div>
+           <div class="xxyGS_input">
+               
+                <wxc-searchbar ref="wxc-searchbar" 
+                            autofocus="true"
+                            placeholder="搜索新秀游戏"
+                            always-show-cancel="true"
+                            theme="148bc8"
+                            @wxcSearchbarCancelClicked="xxySearchCancle"
+                            @wxcSearchbarInputReturned="xxySearchReturn"
+                            @wxcSearchbarInputOnInput="xxySearchInput"
+                            @wxcSearchbarCloseClicked="xxySearchColse"
+                            @wxcSearchbarInputOnFocus="xxySearchFocus"
+                            @wxcSearchbarInputOnBlur="xxySearchBlur"></wxc-searchbar>
+
+           </div>   
+           
        </div>
-       <scroller class="xxyGS_list">
+       <scroller class="xxyGS_list" :style="{'top':Number(appNoticeHeight)+100}">
             <div class="xxyGSL_loding" v-if="refreshing" ref="xxyloading">
                 <image :src="loadingSrc" style="width:50px;height:50px;"></image>
             </div>
@@ -71,16 +77,22 @@ export default {
     },
     created() {
         
+        this.$storage.get('xxyType').then(resData => {
+            this.appNoticeHeight = resData.statusBarHeight;
+        })
     },
     data() {
         return {
+            appNoticeHeight: 40,
+            
             xxy:"http://www.xinxiuyou.com/",
-           refreshing: false, 
-           focusBool: true,
-           loadingSrc: "http://www.xinxiuyou.com/static/img/loader.gif",//动态刷新图标
-           botBool: false,
-           botTex: "没有找到...输入更准确的关键字试试!",
-           searchDeal:[]
+            refreshing: false, 
+            focusBool: true,
+            loadingSrc: "http://www.xinxiuyou.com/static/img/loader.gif",//动态刷新图标
+            botBool: false,
+            botTex: "没有找到...输入更准确的关键字试试!",
+            searchDeal:[],
+
         }
     },
     methods: {
