@@ -36,7 +36,7 @@
            </div>   
            
        </div>
-       <scroller class="xxyGS_list" :style="{'top':Number(appNoticeHeight)+100}">
+       <scroller class="xxyGS_list" :style="{'top':Number(appNoticeHeight)+103}">
             <div class="xxyGSL_loding" v-if="refreshing" ref="xxyloading">
                 <image :src="loadingSrc" style="width:50px;height:50px;"></image>
             </div>

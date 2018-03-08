@@ -84,12 +84,14 @@ export default {
                         name: 'xxyNotice',
                         type: 'PUSH',
                         navShow: false,
+                        statusBarStyle: 'LightContent'
                     })
                     break;
                 case 'setup'://设置
                     this.$router.open({
                         name: 'perSet',
-                        type: 'PUSH'
+                        type: 'PUSH',
+                        statusBarStyle: 'LightContent'
                     })
                     break;
             }

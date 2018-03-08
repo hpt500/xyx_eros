@@ -142,7 +142,8 @@
 
                 this.$router.open({
                     name: page,
-                    type: 'PUSH'
+                    type: 'PUSH',
+                    statusBarStyle: 'LightContent'
                 })
             }
         }

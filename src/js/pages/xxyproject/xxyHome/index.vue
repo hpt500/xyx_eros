@@ -68,14 +68,16 @@
             return {
                 activeIndex: "0",
                 menuTex: Config.xxyTabMsg,
-                dhTop: 140,//通知栏的高度 待设
+                dhTop: 143,//通知栏的高度 待设
             }
         },
         created () {
+            
+            
+
             this.init(); 
             this.$storage.get('xxyType').then(resData => {
-                console.log("12313123123")
-                this.dhTop = Number(resData.statusBarHeight) + 100;
+                this.dhTop = Number(resData.statusBarHeight) + 103;
             })
         },
         components: {

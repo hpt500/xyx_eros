@@ -3,15 +3,16 @@ Created by IDE
 .idea/
 *.iml
 
+docs
+
 .*
 !.gitignore
 !.eslintrc
 !.editorconfig
 !.babelrc
 
-docs
-
 # Node
+eros-widget/
 logs
 *.log
 npm-debug.log*
