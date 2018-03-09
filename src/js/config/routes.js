@@ -62,6 +62,57 @@ export default {
         url: '/pages/xxyproject/xxyPersonal/xxyPersonalResource/played.js'
     },
 
+
+    // 新秀游游戏界面体系
+
+    // 主页
+    "game.main": {
+        // title: "游戏名",
+        url: '/pages/xxyproject/xxyGames/index.js'
+    },
+
+    // 游戏详情
+    // "game.detail": {
+    //     // title: "游戏详情",
+    //     url: '/pages/xxyproject/xxyGames/xxyGameSource/gameDetail/index.vue",
+    // },
+
+    // 帖子相关
+    // "game.post.index": {
+    //     // title: "游戏帖子主页",
+    //     url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/index.js'
+    // },
+    "game.post.detail": {
+        title: "帖子详情",
+        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/post.js'
+    },
+    "game.post.write": {
+        title: "发表帖子",
+        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/write.js'
+    },
+    "game.post.group": {
+        title: "帖子相关信息",
+        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/group.js'
+    },
+
+    // 公告相关
+    "game.notice.detail": {
+        title: "公告详情",
+        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/detail.js'
+    },
+    "game.notice.write": {
+        title: "发表公告",
+        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/write.js'
+    },
+
+
+
+
+
+
+
+
+
     'demo': {
         title: 'weex-eros demo',
         url: '/pages/demo/index.js'

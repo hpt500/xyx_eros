@@ -51,6 +51,20 @@ module.exports = {
         "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/task.vue",
         "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/set.vue",
         "js/pages/xxyproject/xxyPersonal/xxyPersonalResource/edit.vue",
+        // 新秀游游戏主页界面体系
+        "js/pages/xxyproject/xxyGames/index.vue",
+        // 新秀游游戏主页界面体系--详情
+        // "js/pages/xxyproject/xxyGames/xxyGameSource/gameDetail/index.vue",
+        // 新秀游游戏主页界面体系--帖子
+        // "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/index.vue",
+        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/detail.vue",
+        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/group.vue",
+        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/write.vue",
+        // 新秀游游戏主页界面体系--公告
+        // "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/index.vue",
+        "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/detail.vue",
+        "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/write.vue",
+
 
         "js/pages/xxyproject/home/index.vue",
         "js/pages/xxyproject/topic/index.vue",

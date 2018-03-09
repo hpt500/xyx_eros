@@ -35,7 +35,7 @@ module.exports = {
         'androidAppKey': ''
     },
     'wechat': {
-        'enabled': 'false',
+        'enabled': 'true',
         'appId': '',
         'appSecret': ''
     },

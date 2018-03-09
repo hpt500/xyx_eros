@@ -11,20 +11,9 @@
     // padding-top: 60px;
 }
 .xxyHeaderMain{
-    display: flex;
-    @extend .flex-align;
-    height: 103px;
+    @include xxyPadding(0,0,20,20);
 }
-.xxyHeader_scan,
-.xxyHeader_notice,
-.xxyHeader_center{
-    display: flex;
-    flex-direction: column;
-    @extend .flex-align;
-    height: 60px;
-}
-.xxyHeader_scan,
-.xxyHeader_notice {
+.xxyHeader_scan{
     width: 66px;
     height: 66px;
     border-radius: 33px;
@@ -33,51 +22,37 @@
     background-color: rgba(0, 0, 0, 0.5);
 
 }
-.xxyHeader_sic,
-.xxyHeader_ic,
-.xxyHeader_txt,
-.xxyHeader_search,
-.xxyHeader_title {
+.xxyHeader_tex {
     color: #ffffff;
     text-align: center;
     font-weight: 300;
-}
-.xxyHeader_ic {
-    font-size: 40px;
-}
-.xxyHeader_sic {
-    font-size: 50px;
-}
-
-.xxyHeader_txt {
-    font-size: 22px;
-}
-
-.xxyHeader_search {
-    flex: 1;
-    height: 60px;
-    font-size: 36px;
-    padding-top: 13px;
-    color: #999999;
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-
-
-// 新秀游标题栏logo
-.xxyHeader_center{
-    flex: 1;
 }
 .xxyHeader_logo{
     width: 300px;
     height: 60px;
 }
-.xxyHeader_title{
-    font-size: 44px;
+.xxyHCenter{
+    // background-color: greenyellow;
+    @include xxyPadding(0,0,30,30)
 }
-
-
-// 新秀游搜索标题栏
-.xxyHeaderSearch{
-
+.xxyHTab_box{
+    width: 130px;
+    text-align: center;
+}
+.xxyHTab_box_actice{
+    // background-color: #3bb5fc; 
+}
+.xxyHeader_tab{
+   
+}
+.xxyHTB_x{
+    position: absolute;
+    width: 130px;
+    left: 0;bottom: 20;top: 20;
+    background-color: #3bb5fc;
+    border-radius: 20;
+    transition-property: left;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
 }

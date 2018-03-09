@@ -12,10 +12,11 @@
                     <!--<div class="xxyHomeList-page" :ref="'page_'+(index+1)" v-for="(item,index) in menuTex">
 
                         <scroller class="xxyHomePageScro" :class="['xxyHPS'+(index+1)]">
-                        
+
                             <div>
                                 <text style="font-size:28px;">{{item.name}}</text>
                             </div>
+
                         </scroller>
                     </div>-->
                     <div class="xxyHomeList-page" ref="page_1">
@@ -73,12 +74,17 @@
         },
         created () {
             
-            
-
             this.init(); 
             this.$storage.get('xxyType').then(resData => {
                 this.dhTop = Number(resData.statusBarHeight) + 103;
             })
+
+            // this.$router.open({
+            //     name:"game.main",
+            //     type:"PUSH",
+            //     statusBarStyle: 'LightContent'
+            // })
+
         },
         components: {
             xxyHeader, refresher, xxyTab, xxyHomeAni, xxyHomeVid, xxyHomeHot

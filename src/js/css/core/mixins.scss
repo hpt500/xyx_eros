@@ -120,6 +120,9 @@
 .posi-rel{
     position: relative;
 }
+.posi-abs{
+    position: absolute;
+}
 // 新秀游宽高
 @mixin xxyWH($w,$h){
 	width: $w;

@@ -65,17 +65,20 @@ export default {
   // 新秀游动态数据
   xxyAniMsg: [
     {
-      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/06/151255429542275.jpg",
+      game_id: "6",
       name:"元气封神",
       score:"8"
     },
     {
-      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
+      pic:"http://www.xinxiuyou.com/static/img/gameBackups/2017/12/12/151306444477500.jpg",
+      game_id: "12",
       name:"佣兵对决",
       score:"10"
     },
     {
       pic:"http://www.xinxiuyou.com/static/img/gameBackups/2018/01/15/151598445658019.jpg",
+      game_id: "33",
       name:"英魂之战",
       score:"9"
     }

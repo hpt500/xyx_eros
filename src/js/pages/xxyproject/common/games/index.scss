@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import 'src/js/css/core/base.scss';
+
+// 新秀游游戏板块
+.xxyGameBox{
+    background-color: #ffffff;
+}
+// -新秀游游戏展示图
+.xxyGb_pic{
+    @include xxyWH(750px,298px)
+}
+// -新秀游游戏信息
+.xxyGb_msg{
+    @include xxyPadding(10px,10px,10px,10px)
+}
+.xxyGb_name{
+    font-size: 32px;
+    font-weight: bold;
+    color: $xxyColor333;
+}
+.xxyGb_score{
+    display: flex;
+    @extend .flex-row-start;
+}
+.xxyGbs_star{
+    width: 150px;height: 24px;
+}
+.xxyGbs_num{
+    font-size: 28px;
+    color: $xxyColor999;
+    margin-left: 10px;
+}

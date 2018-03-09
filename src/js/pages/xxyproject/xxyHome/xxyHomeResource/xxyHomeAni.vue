@@ -2,22 +2,14 @@
     <div class="xxyHomeAni xxyHomePage">
         <scroller class="xxyHomePageScro" offset-accuracy="300px">
             <refresher @loadingDown="loadingDown" @loadingAjax="loadingAjax"></refresher>
-            <div class="xxyGameBox" v-for="(item, index) in msg.content" :ref="'item'+index">
-                <image :src="item.pic" class="xxyGb_pic" :ref="'gamePic'+index"></image>
-                <div class="xxyGb_msg">
-                    <text class="xxyGb_name" :ref="'gameName'+index">{{item.name}}</text>
-                    <div class="xxyGb_score">
-                        <image :src="'http://www.xinxiuyou.com/static/img/'+item.score+'.png'" class="xxyGbs_star"></image>
-                        <text class="xxyGbs_num" :ref="'gameScore'+index">{{item.score}}</text>
-                    </div>
-                </div>
-            </div>
+            <game-box v-for="(item, index) in msg.content" :msg="item" :index="index"></game-box>
         </scroller>  
 
     </div>
 </template>
 <script>
     import refresher from '../../common/refresh';
+    import gameBox from '../../common/games/gameBox.vue';
     export default{
         data(){
             return {
@@ -36,7 +28,7 @@
            console.log(this.msg)
         },
         components:{
-            refresher,
+            refresher,gameBox
         },
         methods:{
             loadingDown(){

@@ -11,7 +11,8 @@ new Widget({
         routes
     },
     ajax: {
-        baseUrl: 'http://app.weex-eros.com:52077',
+        // baseUrl: 'http://app.weex-eros.com:52077',
+        baseUrl: 'http://www.xinxiuyou.com/',
         /**
          * 接口别名
          */
