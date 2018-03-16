@@ -41,11 +41,11 @@ export default {
                 // 此处进行判断
                 // 若用户未登录则路由到登录界面
                 // 否则跳转到个人中心界面
-                this.$router.open({
-                    name: 'register',
-                    type: 'PUSH'
-                })
-                return;
+                // this.$router.open({
+                //     name: 'register',
+                //     type: 'PUSH'
+                // })
+                // return;
             }
             if (this.pIndexKey == _key) return;
             this.pIndexKey = _key;

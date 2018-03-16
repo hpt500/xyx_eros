@@ -35,6 +35,7 @@ export default {
     iconFontColor: '#333333',
     activeIconFontColor: '#148bc8',
     iconFontUrl: 'bmlocal://iconfont/xxy_iconfont.ttf',
+    
 
     hasActiveBottom: true,
 
@@ -83,6 +84,7 @@ export default {
       score:"9"
     }
   ],
+
 
   // 新秀游视频数据
   xxyVidMsg: [

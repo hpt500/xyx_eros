@@ -68,8 +68,19 @@ $xxyColor999: #999;
     @include border($direction,#efefef,solid,2)
 }
 
-
-
+// 新秀游游戏主图
+.xxyGameMain_pic{
+    @include xxyWH(750px,298px)
+}
+// 新秀游游戏图标
+@mixin xxyGameIcon($w){
+    width: $w;
+    height: $w;
+    border-radius: $w*0.2125;
+}
+.gameIcon100{
+    @include xxyGameIcon(100);
+}
 
 
 // 新秀游顶部tab切换
@@ -89,6 +100,12 @@ $xxyColor999: #999;
 }
 .xxyMain_hasDh{
     @include xxyPosition(140,0,0,0,fixed);
+}
+
+// 新秀游标题板块 初步
+.xxyTitle{
+    @extend .flex-row-between;
+    @include xxyPadding(20,20,20,20);
 }
 
 

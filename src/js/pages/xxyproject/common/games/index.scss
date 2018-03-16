@@ -5,10 +5,6 @@
 .xxyGameBox{
     background-color: #ffffff;
 }
-// -新秀游游戏展示图
-.xxyGb_pic{
-    @include xxyWH(750px,298px)
-}
 // -新秀游游戏信息
 .xxyGb_msg{
     @include xxyPadding(10px,10px,10px,10px)

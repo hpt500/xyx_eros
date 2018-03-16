@@ -1,7 +1,7 @@
 <template>
     <div class="xxy_wrapper xxyGames">
         <div class="app-notice" :style="{'height':appNoticeHeight + 'px'}"></div>
-        <!--<text class="xxyBgColor">游戏主页</text>-->
+        <!--<text class="xxyBgColor">游戏主页</text>
         <xxy-header :title_tab="gameTab" 
                     left_type="back"
                     right_type="more"
@@ -18,9 +18,48 @@
             <div class="xxyGameList-page width750" ref="gtab_3">
                 <xxy-game-notice></xxy-game-notice>
             </div>
-        </scroller>
+        </scroller>-->
+        <slider class="slider" interval="3000" :value="val" :index="index" :showIndicators="show">
+            <div class="frame" v-for="img in msg.screen" :key="img.src">
+                <image class="image" resize="cover" :src="img.src"></image>
+            </div>
+            <indicator class="indicator"></indicator>
+        </slider>
     </div>
 </template>
+<style scoped>
+.xxyGD_screen{
+    margin-top:200px
+}
+.image {
+    width: 700px;
+    height: 700px;
+  }
+  .slider {
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 700px;
+    height: 700px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #41B883;
+  }
+  .frame {
+    width: 700px;
+    height: 700px;
+    position: relative;
+  }
+  .indicator {
+    width: 700px;
+    height: 700px;
+    item-color: green;
+    item-selected-color: red;
+    item-size: 50px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+  }
+</style>
 <script>
 import xxyHeader from "../common/header/xxyHeader.vue"
 // 三板块
@@ -29,6 +68,7 @@ import xxyGameForum from "./xxyGameSource/gameForum/index.vue"
 import xxyGameNotice from "./xxyGameSource/gameNotice/index.vue"
 
 const dom = weex.requireModule('dom');
+import Config from '../../config.js'
 const SCROLL_FULL_WIDTH = 750
 export default {
     data () {
@@ -36,6 +76,7 @@ export default {
             appNoticeHeight: 40,
             gameId: "",
             moniDeal: [],
+            msg: Config.gameDetail,
             gameTab:[
                 {name:"详情",type:"game_detail"},
                 {name:"动态",type:"game_post"},

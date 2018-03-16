@@ -81,7 +81,6 @@
                         <div class="width750" ref="page_2">
                             <text>我的帖子区域</text>
                         </div>
-                        
 
                     </scroller>
 

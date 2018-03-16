@@ -1,6 +1,6 @@
 <template lang="">
     <div class="xxyGameBox mb20"  :ref="'item'+index" @click="gameClick">
-        <image :src="msg.pic" class="xxyGb_pic" :ref="'gamePic'+index"></image>
+        <image :src="msg.pic" class="xxyGb_pic xxyGameMain_pic" :ref="'gamePic'+index"></image>
         <div class="xxyGb_msg">
             <text class="xxyGb_name" :ref="'gameName'+index">{{msg.name}}</text>
             <div class="xxyGb_score">
