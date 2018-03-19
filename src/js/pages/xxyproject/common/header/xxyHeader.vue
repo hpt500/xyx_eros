@@ -134,7 +134,7 @@ export default {
                         // 用户点击后跳转 url
                         image: '',                                    
                         // 图片url    
-                        platforms: ['Pasteboard','WechatSession']     
+                        // platforms: ['Pasteboard','WechatSession']     
                         // 选填，不传此属性默认全部，目前支持朋友圈、朋友、复制链接
                     }).then(resData => {
                         // 成功的回调

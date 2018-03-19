@@ -22,7 +22,7 @@
                 </div>
             </div>
             <!-- 游戏通知栏-qq群之类-->
-            <div class="xxyGD_notcie xxyBgfff mb20 flex-row" v-if="msg.tell!=''?true:false" @click="xxyTexClone(msg.tell)">
+            <div class="xxyGD_notcie xxyBgfff mb20 flex-row" v-if="msg.tell!=''?true:false" @click="xxyTexClone(msg.tell,'复制QQ群成功')">
                 <text class="fs28 xxyColor999">{{"《"+msg.game_name+"》官方QQ群："}}</text>
                 <text class="fs28 limit-one flex xxyColor">{{msg.tell}}</text>
             </div>
@@ -146,9 +146,23 @@
                 // 游戏下载
                 console.log("游戏下载")
             },
-            xxyTexClone(text){
+            xxyTexClone(text,desc){
                 // qq群文本复制
+                
                 console.log("文本复制")
+                if (text.toString() === '') return;
+                this.$tools.copyString(text.toString()).then(
+                    resData => {
+                        this.$notice.toast({
+                            message: desc
+                        });
+                    },
+                    error => {
+                        this.$notice.toast({
+                            message: '拷贝失败'
+                        });
+                    }
+                );
             }
         }
     }
