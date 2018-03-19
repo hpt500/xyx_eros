@@ -148,7 +148,7 @@
             },
             xxyTexClone(text,desc){
                 // qq群文本复制
-                
+
                 console.log("文本复制")
                 if (text.toString() === '') return;
                 this.$tools.copyString(text.toString()).then(
@@ -156,7 +156,7 @@
                         this.$notice.toast({
                             message: desc
                         });
-                    },
+                    }, 
                     error => {
                         this.$notice.toast({
                             message: '拷贝失败'
