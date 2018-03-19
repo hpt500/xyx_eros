@@ -1,12 +1,12 @@
 {
-  "name": "eros-template-name",
+  "name": "eros3",
   "version": "1.0.1-beta.1",
   "description": "a weex project",
   "main": "index.js",
   "keywords": [
     "weex"
   ],
-  "author": "Zero<a2192466@163.com>",
+  "author": "Xyx<565420423@qq.com>",
   "license": "MIT",
   "dependencies": {
     "eros-widget": "^1.0.1-beta.5",

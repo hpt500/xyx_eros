@@ -13,6 +13,10 @@ const TYPE = [{
             type: 'inputExtend'
         },
         {
+            name: '生命周期',
+            type: 'lifecycle'
+        },
+        {
             name: '下拉刷新',
             type: 'refresh'
         }]
@@ -96,9 +100,12 @@ const TYPE = [{
         items: [{
             name: 'weex 瀑布流',
             type: 'waterfall'
-        },{
+        }, {
             name: 'weex-ui',
             type: 'weexui'
+        }, {
+            name: 'bindingx',
+            type: 'bindingx'
         }]
     }
 ];

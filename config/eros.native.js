@@ -1,5 +1,5 @@
 module.exports = {
-    'appName': 'eros2',
+    'appName': 'eros3',
     'appBoard': '/config/index.js',
     // android 监听全局事件homeBack 如果为true 安卓端需要自行调用router.finish方法来关闭应用
     'androidIsListenHomeBack': 'true',
@@ -8,7 +8,6 @@ module.exports = {
         'iOS': '1.0.0'
     },
     'page': {
-        // /pages/xxyproject/index.js
         'homePage': '/pages/xxyproject/index.js',
         'mediatorPage': '/mediator/index.js',
         'navBarColor': '#148bc8',
