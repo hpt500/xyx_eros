@@ -1,7 +1,8 @@
 <template lang="">
-    <div class="xxyGameNotice">
-        
-        <text>公告</text>
+    <div class="xxyGameNotice xxyGamePage" style="paddingTop:70">
+        <scroller class="xxyGameScro flex flex-column" offset-accuracy="300px">
+            <text>公告</text>
+        </scroller>
 
     </div>
 </template>
@@ -27,4 +28,4 @@
         }
     }
 </script>
-<style lang="sass" src="../../index.scss" scoped></style>
+<style lang="sass" src="../index.scss" scoped></style>

@@ -89,7 +89,7 @@ export default{
     // 用户数据
     userMsg:{
         username: "他竟然竟然然然然然",
-        userid:"20028",
+        userid:"20027",
         usericon: "http://www.xinxiuyou.com/static/img/user/2018/03/01/151987762446259.jpg",
         userdj:{
             dj:"1",

@@ -69,14 +69,14 @@
             return {
                 activeIndex: "0",
                 menuTex: Config.xxyTabMsg,
-                dhTop: 143,//通知栏的高度 待设
+                dhTop: 140,//通知栏的高度 待设
             }
         },
         created () {
             
             this.init(); 
             this.$storage.get('xxyType').then(resData => {
-                this.dhTop = Number(resData.statusBarHeight) + 103;
+                this.dhTop = Number(resData.statusBarHeight) + 90;
             })
 
             // this.$router.open({

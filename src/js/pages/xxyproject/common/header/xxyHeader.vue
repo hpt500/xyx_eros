@@ -4,14 +4,14 @@
         'background-color':'rgba(20,139,200,'+(bgColorOp||'1')+')'}"></div>
 
         <div class="xxyHeaderMain dhHeight flex-row flex-align">
-            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft">
+            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']">
                 <text class="xxyHeader_tex fs50 iconfont">{{
                         left_type=="search"?"&#xe65c;":
                         (left_type=="back"?"&#xe679;":
                         "")}}</text>
             </div>
             <div class="xxyHCenter dhHeight flex flex-row flex-align">
-                <text class="xxyHeader_tex fs44" v-if="xxyTitleTex">{{title}}</text>
+                <text class="xxyHeader_tex limit_one" :style="{'fontSize':titleFs?titleFs:'44'}" v-if="xxyTitleTex">{{title}}</text>
                 <image v-if="xxyTitleImg" :src="title_icon" class="xxyHeader_logo"></image>
                 <div class="xxyHeader_tab dhHeight posi-rel flex-row" v-if="xxyTitleTab">
                     <div class="xxyHTB_x" :style="{'left':tabIndex*130}"
@@ -51,12 +51,12 @@ export default {
             xxyTitleImg: (!(this.title_icon==undefined)&&this.center_if=='true'),
             xxyTitleTab: (!(this.title_tab==undefined)&&this.center_if=='true'),
 
-            appNoticeHeight: 56,
+            appNoticeHeight: 50,
 
         }
     },
     props:[
-        "title","title_icon","title_tab","left_type","right_type","center_if","bgColorOp","tabIndex"
+        "title","title_icon","title_tab","left_type","right_type","center_if","bgColorOp","tabIndex","titleFs"
     ],
     components: { WxcMinibar },
     created() {

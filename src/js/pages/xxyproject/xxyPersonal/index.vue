@@ -42,15 +42,15 @@
                                     <text class="xxyColor999 fs28  h40 line-height40">{{userMsg.userdj.mqScore.type+userMsg.userdj.mqScore.num}}</text>
                                     <text class="xxyColor999 fs28  h40 line-height40">{{userMsg.userdj.jrScore.type+userMsg.userdj.jrScore.num}}</text>
                                     <text class="xxyColor999 fs28  h40 line-height40">{{userMsg.userdj.xyScore.type+userMsg.userdj.mqScore.num + "/" + userMsg.userdj.xyScore.num}}</text>
-                                </div>
-                                <div class="xxyPMEDGT_right flex-row flex-row-align-end">
+                                </div> 
+                                <div class="xxyPMEDGT_right flex-row flex-align-end">
                                     <text class="fs28 xxyColorfff mb5">等级:</text>
                                     <text class="fs60 xxyColorfff flex xxyTex-center line-height60">{{userMsg.userdj.dj}}</text>
                                 </div>
                             </div>
                             <div class="xxyPMED_process mt10">
                                 <wxc-progress :value="(userMsg.userdj.mqScore.num/userMsg.userdj.xyScore.num)*100" bar-width="666" bar-height="24"	bar-color="#148bc8"
-                                pro-radius="12px"
+                                pro-radius="12"
                                 pro-bgcolor="#5bc5e5"></wxc-progress>
                             </div>
                         </div>
@@ -92,11 +92,11 @@
         </scroller>
 
         <xxy-header :title="userMsg.username" 
-                    right_type="setup"
+                    :left_type="isMine?'':'back'"
+                    :right_type="isMine?'setup':'more'"
                     center_if=false
                     bgColorOp="0"
                     ></xxy-header>
-        
         
         
     </div>
@@ -116,7 +116,20 @@
                 userMsg:Config.userMsg,
                 activeIndex: "0",
                 menuTex: Config.userMsg.userTabMsg,
+                isMine: true,
             }
+        },
+        eros:{
+            // 路由打开本页面之前
+            beforeAppear (params, options) {
+                if(params.user_id==this.userMsg.userid) {return;}
+                else {this.isMine = false;}
+                // 若访问他人界面则进行请求该user数据
+                console.log(params);
+            },
+            
+        },
+        created(){  
         },
         components: {
             xxyHeader,xxyTab,refresher,WxcProgress

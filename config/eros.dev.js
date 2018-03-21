@@ -40,7 +40,7 @@ module.exports = {
         // 新秀游搜索游戏界面
         "js/pages/xxyproject/xxyGSearch/search.vue",
         // 新秀游消息通知界面
-        "js/pages/xxyproject/xxyNotice/notice.vue",
+        "js/pages/xxyproject/xxyMessage/index.vue",
         // 新秀游个人中心界面体系
         "js/pages/xxyproject/xxyPersonal/login.vue",
         "js/pages/xxyproject/xxyPersonal/register.vue",
@@ -57,13 +57,14 @@ module.exports = {
         // "js/pages/xxyproject/xxyGames/xxyGameSource/gameDetail/index.vue",
         // 新秀游游戏主页界面体系--帖子
         // "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/index.vue",
-        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/detail.vue",
-        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/group.vue",
-        "js/pages/xxyproject/xxyGames/xxyGameSource/gameForum/write.vue",
+        "js/pages/xxyproject/xxyForum/xxyForumPost/detail.vue",
+        "js/pages/xxyproject/xxyForum/xxyForumPost/group.vue",
+        "js/pages/xxyproject/xxyForum/xxyForumPost/write.vue",
         // 新秀游游戏主页界面体系--公告
         // "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/index.vue",
-        "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/detail.vue",
-        "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/write.vue",
+        "js/pages/xxyproject/xxyNotice/xxyNoticeSource/detail.vue",
+        "js/pages/xxyproject/xxyNotice/xxyNoticeSource/write.vue",
+        "js/pages/xxyproject/xxyNotice/xxyNoticeSource/group.vue",
 
 
         "js/pages/xxyproject/home/index.vue",

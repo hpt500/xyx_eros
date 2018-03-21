@@ -107,13 +107,13 @@
     align-items:center;
 }
 
-.flex-row-align-end{
+.flex-align-end{
     align-items: flex-end;
 }
-.flex-row-just-center{
-    align-items: center;
+.flex-just-center{
+    justify-content: center;
 }
-.flex-row-align-center{
+.flex-align-center{
     align-items: center;
 }
 
@@ -151,5 +151,9 @@
     position: $type;
 }
 
+// 新秀游宽度切块
+@mixin xxyWidthQk($w,$num){
+    width: $w/$num;
+}
 
 // 新秀游板块包含导航|tab切换

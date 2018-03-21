@@ -3,6 +3,7 @@ export default {
     gameDetail:{
         main_pic: "http://192.168.99.102/SCI/static/img/gameBackups/2017/12/06/151255424229352.jpg",
         icon: "http://192.168.99.102/SCI/static/img/gameBackups/2017/12/06/151253389166931.png",
+        game_id: "17",
         game_name: "五行师",
         score: "9",
         descript: "每一张卡都很有用，绝无废卡!",
@@ -22,7 +23,58 @@ export default {
                 src:"http://192.168.99.102/SCI/static/img/developerscreen/2017/12/06/151253381823650.jpg",
             },
         ],
-        uploadCont:"1.新增...<br>2.新增...<br>3.新增..."
+        uploadCont:"--【版本大更新】--<br>1.新增武器系武器武器武器武器武器统<br>2.新增技能列能列能列能列能列表<br>3.新增宠物系系系系系系系系系统<br>4.新增...",
+        msgDetail:[
+            {type:'文件大小:',content:'260.1231231231231293MB'},
+            {type:'当前版本:',content:'1.2.1'},
+            {type:'更新时间:',content:'2017年12月11日'},
+            {type:'游戏厂商:',content:'广州红雪游戏设计有限公司'}
+        ]
+    },
+    gamePost:{
+        select:[
+            {text:"热点"},
+            {text:"全部"},
+            {text:"精华"},
+            {text:"官方"}
+        ],
+        regular:[
+            {text:"回复时间排序",key:"regular-hf",iconfont:"\ue682"},
+            {text:"发帖时间排序",key:"regular-ft",iconfont:"\ue759"}
+        ],
+        posts:[
+            {
+                id:"68",
+                title:"第一次当欧洲人",
+                content:"发现周年礼包没用,就上线欢乐下四星契约,结果发现我的人生一片灰暗",
+                pic:[       
+                    {src:"http://www.xinxiuyou.com/static/img/img/2018/02/27/151971852085219.jpg"},
+                ],
+                user_name:"空心人",
+                user_id:"20028",
+                icon:"http://www.xinxiuyou.com/static/img/user/2018/01/26/151693754049593.jpg",
+                browseNum:"128",
+                replyNum:"59",
+                thumbNum:"68",
+                create_time:"3小时前"
+            },
+            {
+                id:"372",
+                title:"好久没玩了打算来一局快攻",
+                content:"结果被两张无敌牛虱和阳关三叠打爆了",
+                pic:[       
+                    {src:"http://www.xinxiuyou.com/static/img/img/2018/01/23/151670157632494.jpg"},
+                    {src:"http://www.xinxiuyou.com/static/img/img/2018/01/23/151670156761423.jpg"}
+                ],
+                user_name:"呼延智障",
+                user_id:"118",
+                icon:"http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                browseNum:"74",
+                replyNum:"8",
+                thumbNum:"9",
+                create_time:"5小时前"
+            }
+        ]
     }
     
 

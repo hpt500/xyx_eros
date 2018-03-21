@@ -19,13 +19,13 @@
                 </div>
            </div>-->
            <div class="app-notice" :style="{'height':appNoticeHeight + 'px'}"></div>
-           <div class="xxyGS_input">
+           <div class="xxyGS_input dhHeight">
                
                 <wxc-searchbar ref="wxc-searchbar" 
                             autofocus="true"
                             placeholder="搜索新秀游戏"
                             always-show-cancel="true"
-                            theme="148bc8"
+                            theme="xxyBlue"
                             @wxcSearchbarCancelClicked="xxySearchCancle"
                             @wxcSearchbarInputReturned="xxySearchReturn"
                             @wxcSearchbarInputOnInput="xxySearchInput"
@@ -36,7 +36,7 @@
            </div>   
            
        </div>
-       <scroller class="xxyGS_list" :style="{'top':Number(appNoticeHeight)+103}">
+       <scroller class="xxyGS_list" :style="{'top':Number(appNoticeHeight)+90}">
             <div class="xxyGSL_loding" v-if="refreshing" ref="xxyloading">
                 <image :src="loadingSrc" style="width:50px;height:50px;"></image>
             </div>
@@ -83,7 +83,7 @@ export default {
     },
     data() {
         return {
-            appNoticeHeight: 40,
+            appNoticeHeight: 50,
             
             xxy:"http://www.xinxiuyou.com/",
             refreshing: false, 

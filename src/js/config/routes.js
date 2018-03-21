@@ -17,7 +17,7 @@ export default {
     //  消息通知
     'xxyNotice': {
         title: '消息通知',
-        url: '/pages/xxyproject/xxyNotice/notice.js'
+        url: '/pages/xxyproject/xxyMessage/index.js'
 
     },
     'login': {
@@ -30,7 +30,11 @@ export default {
     },
 
     // 个人中心处的路由界面
-
+    // -用户界面
+    'perMain':{
+        // title: 'Ta的主页',
+        url: '/pages/xxyproject/xxyPersonal/index.js'
+    },
     // -任务界面
     'perTask':{
         title: '我的任务',
@@ -83,26 +87,30 @@ export default {
     //     url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/index.js'
     // },
     "game.post.detail": {
-        title: "帖子详情",
-        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/post.js'
+        // title: "帖子详情",
+        url: '/pages/xxyproject/xxyForum/xxyForumPost/detail.js'
     },
     "game.post.write": {
         title: "发表帖子",
-        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/write.js'
+        url: '/pages/xxyproject/xxyForum/xxyForumPost/write.js'
     },
     "game.post.group": {
         title: "帖子相关信息",
-        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameForum/group.js'
+        url: '/pages/xxyproject/xxyForum/xxyForumPost/group.js'
     },
 
     // 公告相关
     "game.notice.detail": {
         title: "公告详情",
-        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/detail.js'
+        url: '/pages/xxyproject/xxyNotice/xxyNoticeSource/detail.js'
     },
     "game.notice.write": {
         title: "发表公告",
-        url: '/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/write.js'
+        url: '/pages/xxyproject/xxyNotice/xxyNoticeSource/write.js'
+    },
+    "game.post.group": {
+        title: "公告相关信息",
+        url: '/pages/xxyproject/xxyNotice/xxyNoticeSource/group.js'
     },
 
 

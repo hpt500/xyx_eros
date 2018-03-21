@@ -3,6 +3,7 @@
     display: flex;
     height: 60px;
     background-color: #ffffff;
+    position: relative;
 }
 .xxyTabBox{
     display: flex;
@@ -10,6 +11,16 @@
 }
 .xxyTabBox-on{
     @include border (bottom,#148bcb,solid,1);
+}
+.xxyTabBox-xx{
+    height: 3px;
+    background-color: #148bc8;
+    position: absolute;
+    left: 0;bottom: 0;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
 }
 .xxyTabBox-default{
     @include border (bottom,#FFFFFF,solid,1);

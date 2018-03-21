@@ -29,7 +29,9 @@
 }
 // 通知条
 .xxyGD_notcie{
-    @include xxyPadding(15,15,20,20);
+    @include xxyPadding(0,0,20,20);
+    height: 70;
+    align-items: center;
 }
 // 游戏简介
 .xxyGDC_tex{
@@ -47,8 +49,31 @@
     // margin-bottom: 16;
     @include xxyMargin(0,16,8,8);
 }
+// 游戏详细
+.xxyGDV_boxs{
+    flex-wrap: wrap;
+    @include xxyPadding(10,10,20,20);
+}
+.xxyGDV_box{
+    @include xxyWidthQk(710,3);
+}
 
-// 游戏动态
+
+// 游戏动态 03.19
+.xxyGDIcon_small{
+    @include xxyGameIcon(45);
+}
+// 选中的帖子类型
+.xxyGFS_btn{
+    font-size: 32;
+    color: #333333;
+    font-weight: bold;
+    margin-right: 40;
+}
+.xxyGFS_btn_active{
+    color: #148bc8;
+}
+
 
 
 // 游戏公告

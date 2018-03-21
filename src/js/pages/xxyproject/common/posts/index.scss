@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import 'src/js/css/core/base.scss';
+
+.xxyPostBox{
+
+}
+.xxyPb_top{
+    @include xxyPadding(20,20,20,20)
+}
+.xxyPb_usericon{
+    @include xxyUserIcon(80)
+}
+.xxyPb_usermsg{
+    height: 80;
+}
+.xxyPbb_msg{
+    @include xxyPadding(20,20,20,20)
+}

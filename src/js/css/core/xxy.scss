@@ -5,12 +5,12 @@
 }
 // app通知栏高度
 .app-notice{
-    width: 750;height: 40;
+    width: 750;height: 50;
     background-color: #148bc8;
 }
 //  导航栏高度
 .dhHeight{
-    height: 103px;
+    height: 90px;
 }
 
 
@@ -67,16 +67,33 @@ $xxyColor999: #999;
 @mixin xxyBoxShaow-small-bf($direction: top){
     @include border($direction,#efefef,solid,2)
 }
+// 新秀游底线
+.xxyBBorder{
+    @include xxyBoxShaow-small-bf(bottom);
+}
 
 // 新秀游游戏主图
 .xxyGameMain_pic{
     @include xxyWH(750px,298px)
+}
+// 新秀游展示图
+@mixin xxyScreenPic($w){
+    @include xxyWH($w,$w*0.56); 
+}
+.xxyScreen_750{
+    @include xxyScreenPic(750);
 }
 // 新秀游游戏图标
 @mixin xxyGameIcon($w){
     width: $w;
     height: $w;
     border-radius: $w*0.2125;
+}
+// 新秀游用户头像
+@mixin xxyUserIcon($w){
+    width: $w;
+    height: $w;
+    border-radius: $w/2;
 }
 .gameIcon100{
     @include xxyGameIcon(100);
@@ -90,6 +107,10 @@ $xxyColor999: #999;
     color: #ffffff;
     background-color: #148bc8;
     @include xxyPadding(0,0,20,20)
+}
+// 新秀游按压效果
+.xxybtnActive:active{
+    opacity: 0.5;
 }
 
 // 新秀游主要板块类 全面屏

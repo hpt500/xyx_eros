@@ -1,9 +1,10 @@
 <template>
   <div class="xxyTab">
     <scroller ref="TabScroller" scroll-direction="horizontal" show-scrollbar="false" class="xxyTabScro flex-row" @scroll="menuScroll">
-        <div class="xxyTabBox flex-column-center" :key="index" @click="activeMenu(index)" :ref="'menu_' + index" :class="[ index == activeIndex ? 'xxyTabBox-on' : 'xxyTabBox-default']" v-for="(item, index) in menu">
-            <text class="xxyTabBox-items" :class="[ index == activeIndex ? 'xxyTabBoxItems-on' : '']">{{item.name}}</text> 
+        <div class="xxyTabBox flex-column-center" :key="index" @click="activeMenu(index)" :ref="'menu_' + index" v-for="(item, index) in menu">
+            <text class="xxyTabBox-items" :class="[ index == activeIndex ? 'xxyTabBoxItems-on' : '']">{{item.name}}</text>
         </div>
+        <div class="xxyTabBox-xx" :style="{'width':750/menu.length,'left':(750/menu.length)*activeIndex}"></div>
     </scroller>
     <!--<image class="scroll-arrow" v-if="showRight" src="//img.benmu-health.com/app-benmu-health/doctor/linear-gradient-arrow.png" @click="scrollToMenu(menu.length - 1)"></image>-->
 </div>
