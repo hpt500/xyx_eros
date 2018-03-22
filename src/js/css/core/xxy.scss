@@ -129,6 +129,15 @@ $xxyColor999: #999;
     @include xxyPadding(20,20,20,20);
 }
 
+// 关于用户官方称号标志
+.xxyTenChIcon_30{
+    @include xxyWH(30,30)
+}
+// 关于帖子楼主标志
+.xxyPostLz{
+    @include border-all(#999999,solid,2);
+    @include xxyPadding(4,4,4,4)
+}
 
 
 

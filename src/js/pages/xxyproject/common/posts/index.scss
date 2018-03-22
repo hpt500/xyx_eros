@@ -8,11 +8,26 @@
     @include xxyPadding(20,20,20,20)
 }
 .xxyPb_usericon{
-    @include xxyUserIcon(80)
+    @include xxyUserIcon(70)
 }
 .xxyPb_usermsg{
-    height: 80;
+    height: 70;
 }
 .xxyPbb_msg{
     @include xxyPadding(20,20,20,20)
+}
+
+// 帖子评论
+.xxyPC_icon{
+    @include xxyUserIcon(70);
+}
+.xxyPC_msg{
+    height: 70;
+}
+.xxyPC_content{
+    @include xxyPadding(30,30,0,0);
+}
+.xxyPC_reply{
+    @include xxyPadding(20,20,0,0);
+    @include border(top,#efefef,solid,2);
 }

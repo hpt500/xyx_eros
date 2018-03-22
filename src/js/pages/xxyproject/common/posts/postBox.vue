@@ -5,7 +5,7 @@
             <div class="xxyPb_usermsg flex flex-column-between">
                 <text class="xxyColor333 fs28 font-weight">{{msg.user_name}}</text>
                 <div class="flex-row-between">
-                    <text class="fs28 xxyColor7f7">发表了新帖</text>
+                    <text class="fs24 xxyColor7f7">发表了新帖</text>
                     <text class="fs24 xxyColor999">{{msg.browseNum+`次浏览`}}</text>
                 </div>
             </div>

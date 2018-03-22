@@ -1,1 +1,59 @@
 @import 'src/js/css/core/base.scss';
+
+// 帖子详情设计
+.xxyPostDetail{
+
+}
+// 帖子顶部
+.xxyPD_top{
+    @include xxyPadding(20,20,20,20);
+}
+.xxyPDT_poster{
+    margin-bottom: 20;
+}
+.xxyPoster_icon{
+    @include xxyUserIcon(70);
+    @include xxyMargin(0,0,5,15);
+}
+.xxyPoster_msg{
+    height: 70;
+}
+// 关注按钮
+.xxyPostFollow{
+    height: 46;
+    border-radius: 23;
+    @include xxyPadding(0,0,25,25)
+}
+.xxyTenChIcon{
+    @include xxyWH(30,30)
+}
+// 帖子标题
+.xxyPDT_title{
+    @include xxyPadding(20,20,5,5);
+    @include border(top,#d4d4d4,dashed,4)
+}
+// 帖子操作竖线间隔
+.xxyPost_sx{
+    width: 2;height: 24px;
+    background-color: #999999;
+    @include xxyMargin(0,0,20,20)
+}
+
+// 帖子内容
+.xxyPDB_msg{
+    @include xxyPadding(20,20,20,20);
+    @include border(bottom,#efefef,solid,2)
+}
+// 帖子操作
+.xxyPDB_btn{
+    @include xxyMargin(0,0,35,35)
+}
+.xxyPDB_btnIcon{
+    @include xxyUserIcon(70);
+}
+// 帖子评论
+.xxyPDB_com{
+    @include xxyPadding(20,20,20,20);
+    @include border(bottom,#efefef,solid,2);
+}
+

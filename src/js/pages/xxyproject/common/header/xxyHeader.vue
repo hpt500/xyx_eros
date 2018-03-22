@@ -11,7 +11,7 @@
                         "")}}</text>
             </div>
             <div class="xxyHCenter dhHeight flex flex-row flex-align">
-                <text class="xxyHeader_tex limit_one" :style="{'fontSize':titleFs?titleFs:'44'}" v-if="xxyTitleTex">{{title}}</text>
+                <text class="xxyHeader_tex flex limit-one" :style="{'fontSize':titleFs?titleFs:'44'}" v-if="xxyTitleTex">{{title}}</text>
                 <image v-if="xxyTitleImg" :src="title_icon" class="xxyHeader_logo"></image>
                 <div class="xxyHeader_tab dhHeight posi-rel flex-row" v-if="xxyTitleTab">
                     <div class="xxyHTB_x" :style="{'left':tabIndex*130}"

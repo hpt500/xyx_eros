@@ -9,6 +9,12 @@
     background-color: $bgcolor;
 }
 /*个性化文字大小*/
+.fs18{
+    font-size: 18;
+}
+.fs20{
+    font-size: 20;
+}
 .fs24 {
     font-size: 24;
 }
@@ -68,6 +74,9 @@
 }
 .mr0 {
     margin-right: 0;
+}
+.mr2{
+    margin-right: 2;
 }
 .mr5 {
     margin-right: 5;
@@ -132,6 +141,9 @@
 .ml0 {
     margin-left: 0;
 }
+.ml2 {
+    margin-left: 2;
+}
 .ml5 {
     margin-left: 5;
 }
@@ -170,6 +182,9 @@
 }
 .pb15 {
     padding-bottom: 15;
+}
+.pb20 {
+    padding-bottom: 20;
 }
 .pb40 {
     padding-bottom: 40;
@@ -227,6 +242,12 @@
 }
 .line-height40{
     line-height: 40;
+}
+.line-heihgt44{
+    line-height: 44;
+}
+.line-height50{
+    line-height: 50;
 }
 .line-height56{
     line-height: 56;
