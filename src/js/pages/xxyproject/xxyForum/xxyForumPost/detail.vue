@@ -9,7 +9,12 @@
                     center_if=true
                     bgColor="#148bc8"></xxy-header>
         <scroller class="xxyMain_hasDh flex-row" offset-accuracy="0" :style="{'top':Number(appNoticeHeight) + 90}">
-
+            <div class="xxyPD_top">
+                
+            </div>
+            <div class="xxyPD_bottom">
+                
+            </div>
         </scroller>
     </div>
 </template>

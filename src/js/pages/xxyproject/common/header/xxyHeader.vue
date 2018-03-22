@@ -4,7 +4,7 @@
         'background-color':'rgba(20,139,200,'+(bgColorOp||'1')+')'}"></div>
 
         <div class="xxyHeaderMain dhHeight flex-row flex-align">
-            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']">
+            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft" v-if="left_type" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']">
                 <text class="xxyHeader_tex fs50 iconfont">{{
                         left_type=="search"?"&#xe65c;":
                         (left_type=="back"?"&#xe679;":
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="xxyHRight xxyHeader_scan flex-column flex-align" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']" @click="xxyRight">
+            <div class="xxyHRight xxyHeader_scan flex-column flex-align" v-if="right_type" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']" @click="xxyRight">
                 <text class="xxyHeader_tex fs50 iconfont" >{{
                     right_type=="notice"?"&#xe70a;":
                     (right_type=="setup"?"&#xe7fb;":
