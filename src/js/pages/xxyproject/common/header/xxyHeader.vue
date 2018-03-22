@@ -25,9 +25,9 @@
                         <text class="xxyHTab_box fs32 xxyColorfff flex">{{item.name}}</text>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="xxyHRight xxyHeader_scan flex-column flex-align" v-if="right_type" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']" @click="xxyRight">
-                <text class="xxyHeader_tex fs50 iconfont" >{{
+                <text class="xxyHeader_tex fs50 iconfont" >{{ 
                     right_type=="notice"?"&#xe70a;":
                     (right_type=="setup"?"&#xe7fb;":
                     (right_type=="more"?"&#xe7e5;":
