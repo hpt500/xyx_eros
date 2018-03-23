@@ -24,9 +24,7 @@
     border-radius: 23;
     @include xxyPadding(0,0,25,25)
 }
-.xxyTenChIcon{
-    @include xxyWH(30,30)
-}
+
 // 帖子标题
 .xxyPDT_title{
     @include xxyPadding(20,20,5,5);
@@ -41,7 +39,7 @@
 
 // 帖子内容
 .xxyPDB_msg{
-    @include xxyPadding(20,20,20,20);
+    @include xxyPadding(25,25,25,25);
     @include border(bottom,#efefef,solid,2)
 }
 // 帖子操作
@@ -53,7 +51,7 @@
 }
 // 帖子评论
 .xxyPDB_com{
-    @include xxyPadding(20,20,20,20);
+    @include xxyPadding(25,25,25,25);
     @include border(bottom,#efefef,solid,2);
 }
 

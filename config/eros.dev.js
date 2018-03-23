@@ -60,6 +60,7 @@ module.exports = {
         "js/pages/xxyproject/xxyForum/xxyForumPost/detail.vue",
         "js/pages/xxyproject/xxyForum/xxyForumPost/group.vue",
         "js/pages/xxyproject/xxyForum/xxyForumPost/write.vue",
+        "js/pages/xxyproject/xxyForum/xxyForumPost/comment.vue",
         // 新秀游游戏主页界面体系--公告
         // "js/pages/xxyproject/xxyGames/xxyGameSource/gameNotice/index.vue",
         "js/pages/xxyproject/xxyNotice/xxyNoticeSource/detail.vue",

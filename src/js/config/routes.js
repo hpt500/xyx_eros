@@ -98,6 +98,10 @@ export default {
         title: "帖子相关信息",
         url: '/pages/xxyproject/xxyForum/xxyForumPost/group.js'
     },
+    "game.post.comment": {
+        // title: "帖子评论",
+        url: '/pages/xxyproject/xxyForum/xxyForumPost/comment.js'
+    },
 
     // 公告相关
     "game.notice.detail": {

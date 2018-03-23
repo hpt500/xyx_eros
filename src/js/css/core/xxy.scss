@@ -133,10 +133,15 @@ $xxyColor999: #999;
 .xxyTenChIcon_30{
     @include xxyWH(30,30)
 }
+.xxyTenChIcon_20{
+    @include xxyWH(20,20)
+}
 // 关于帖子楼主标志
 .xxyPostLz{
     @include border-all(#999999,solid,2);
-    @include xxyPadding(4,4,4,4)
+    @include xxyPadding(0,0,4,4);
+    height: 28;border-radius: 6;
+    @extend .flex-row-center;
 }
 
 

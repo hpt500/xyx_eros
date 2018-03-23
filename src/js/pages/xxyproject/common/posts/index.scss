@@ -25,9 +25,13 @@
     height: 70;
 }
 .xxyPC_content{
-    @include xxyPadding(30,30,0,0);
-}
-.xxyPC_reply{
     @include xxyPadding(20,20,0,0);
+}
+// 帖子回复
+.xxyPC_reply{
+    @include xxyPadding(25,0,0,0);
     @include border(top,#efefef,solid,2);
+}
+.xxyPC_rep{
+    
 }

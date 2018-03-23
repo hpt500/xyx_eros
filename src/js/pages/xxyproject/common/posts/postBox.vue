@@ -1,6 +1,6 @@
 <template lang="">
     <div class="xxyPostBox" :ref="'postBox_'+msg.id" @click="gameClick">
-        <div class="xxyPb_top flex-row" @click="userFn">
+        <div class="xxyPb_top flex-row" @click="userFn(msg.user_id)">
             <image :src="msg.icon" class="xxyPb_usericon mr20"></image>
             <div class="xxyPb_usermsg flex flex-column-between">
                 <text class="xxyColor333 fs28 font-weight">{{msg.user_name}}</text>
@@ -90,13 +90,13 @@
                 //     console.log(error)
                 // })
             },
-            userFn(){
+            userFn(userid){
                 // 点击路由用户主页
                 this.$router.open({
                     name: "perMain",
                     type: "PUSH",
                     params: {
-                        user_id: this.msg.user_id
+                        user_id: userid
                     },
                     statusBarStyle: "lightContent"
                 })

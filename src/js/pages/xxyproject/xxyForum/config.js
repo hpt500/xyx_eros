@@ -38,13 +38,55 @@ export default {
                         user_id: "118",
                         user_name:"呼延智障",
                         icon:"http://www.xinxiuyou.com/static/img/usericon/large/118.png",
-                        content: "回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容回复内容",
+                        content: "测试回复内容板块,文本内容限制两行,点击路由可跳转至详情评论界面查看完整回复,点击任意回复\全部回复按钮皆可跳转",
+                        theCh: "新秀游编辑",//称号  --楼主  --官方
                         thumbNum: "9",//赞
                         stampNum: "2",//踩
                         create_time: "10小时前",
                         isthumb: false,//是否点赞
                         isstamp: false,//是否反对
-                    }
+
+                        ouser_id: "190",
+                        ouser_name: "番茄就是西红柿",
+                        ouser_icon: "http://www.xinxiuyou.com/static/img/usericon/large/190.png",
+                        ouserCh: "新秀游主管"
+                    },
+                    {
+                        id: "23",
+                        user_id: "190",
+                        user_name:"番茄就是西红柿",
+                        icon:"http://www.xinxiuyou.com/static/img/usericon/large/190.png",
+                        content: "大于2条回复则出现全部回复数板块",
+                        theCh: "新秀游主管",//称号  --楼主  --官方
+                        thumbNum: "9",//赞
+                        stampNum: "2",//踩
+                        create_time: "10小时前",
+                        isthumb: false,//是否点赞
+                        isstamp: false,//是否反对
+
+                        ouser_id: "118",
+                        ouser_name: "呼延智障",
+                        ouser_icon: "http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                        ouserCh: "新秀游编辑"
+                    },
+                    {
+                        id: "23",
+                        user_id: "118",
+                        user_name:"呼延智障",
+                        icon:"http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                        content: "大于2条回复则出现全部回复数板块",
+                        theCh: "新秀游编辑",//称号  --楼主  --官方
+                        thumbNum: "9",//赞
+                        stampNum: "2",//踩
+                        create_time: "10小时前",
+                        isthumb: false,//是否点赞
+                        isstamp: false,//是否反对
+
+                        ouser_id: "190",
+                        ouser_name: "番茄就是西红柿",
+                        ouser_icon: "http://www.xinxiuyou.com/static/img/usericon/large/190.png",
+                        ouserCh: "新秀游主管"
+                    },
                 ],
             }
         ]

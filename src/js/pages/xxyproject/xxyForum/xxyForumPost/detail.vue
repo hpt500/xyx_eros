@@ -13,9 +13,9 @@
                     :style="{'top':Number(appNoticeHeight) + 90}">
             <div class="xxyPD_top xxyBgfff mb20">
                 <div class="xxyPDT_poster flex-row flex-align-center">
-                    <image :src="msg.icon" class="xxyPoster_icon"></image>
+                    <image :src="msg.icon" class="xxyPoster_icon" @click="userFn(msg.user_id)"></image>
                     <div class="xxyPoster_msg flex flex-column-between mr10">
-                        <div class="flex-row flex-align-center">
+                        <div class="flex-row flex-align-center" @click="userFn(msg.user_id)">
                             <text class="fs28 xxyColor333 font-weight">{{msg.user_name}}</text>
                             <div class="flex-row flex-align-center ml10" v-if="msg.theCh">
                                 <image src="http://www.xinxiuyou.com/static/img/houtai/bz.png" class="xxyTenChIcon_30 mr5"></image>
@@ -138,7 +138,19 @@
             // 只看楼主
             justWatch(){
                 this.justWatchLz = !this.justWatchLz;
-            }
+            },
+            // 路由用户界面
+            userFn(userid){
+                // 点击路由用户主页
+                this.$router.open({
+                    name: "perMain",
+                    type: "PUSH",
+                    params: {
+                        user_id: userid
+                    },
+                    statusBarStyle: "lightContent"
+                })
+            },
             
         }
 
