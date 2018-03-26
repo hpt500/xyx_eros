@@ -126,7 +126,7 @@ $xxyColor999: #999;
 // 新秀游标题板块 初步
 .xxyTitle{
     @extend .flex-row-between;
-    @include xxyPadding(20,20,20,20);
+    @include xxyPadding(20,20,25,25);
 }
 
 // 关于用户官方称号标志

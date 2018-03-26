@@ -4,8 +4,9 @@
         'background-color':'rgba(20,139,200,'+(bgColorOp||'1')+')'}"></div>
 
         <div class="xxyHeaderMain dhHeight flex-row flex-align">
-            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']">
-                <text class="xxyHeader_tex fs50 iconfont" v-if="left_type">{{
+            <div class="xxyHLeft xxyHeader_scan flex-column flex-align" @click="xxyLeft" :class="[Math.floor(bgColorOp)==0?'xxyHeader_scan_opcity':'']"
+             v-if="left_type">
+                <text class="xxyHeader_tex fs50 iconfont">{{
                         left_type=="search"?"&#xe65c;":
                         (left_type=="back"?"&#xe679;":
                         "")}}</text>

@@ -73,6 +73,9 @@
             },
             postDz(){
                 console.log("点赞帖子")
+                this.$notice.toast({
+                    message: "点赞帖子"
+                })
                 // 点赞帖子
                 // const str = '';
                 // this.$fetch({

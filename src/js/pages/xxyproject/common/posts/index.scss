@@ -25,13 +25,20 @@
     height: 70;
 }
 .xxyPC_content{
-    @include xxyPadding(20,20,0,0);
+    @include xxyPadding(20,0,0,0);
 }
 // 帖子回复
 .xxyPC_reply{
     @include xxyPadding(25,0,0,0);
+    @include xxyMargin(20,0,0,0);
     @include border(top,#efefef,solid,2);
 }
-.xxyPC_rep{
-    
+.xxyPR_icon{
+    @include xxyUserIcon(40);
+}
+.xxyPRB_detail{
+    margin-left: 55;
+    @extend .xxyBBorder;
+    @include xxyPadding(15,20,0,0);
+
 }

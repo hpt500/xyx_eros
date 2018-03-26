@@ -25,7 +25,7 @@ export default {
                 user_name: "番茄就是西红柿",
                 icon: "http://www.xinxiuyou.com/static/img/usericon/large/190.png",
                 content: "评价内容评价内容评价内容评价内容评价内容评价内容评价内容评价内容",
-                theCh: "新秀游编辑",//称号  --楼主  --官方
+                theCh: "新秀游编辑编辑编辑编辑编辑编辑",//称号  --楼主  --官方
                 replyNum: "8",//回复
                 thumbNum: "9",//赞
                 stampNum: "2",//踩
@@ -87,7 +87,59 @@ export default {
                         ouser_icon: "http://www.xinxiuyou.com/static/img/usericon/large/190.png",
                         ouserCh: "新秀游主管"
                     },
+                    {
+                        id: "23",
+                        user_id: "190",
+                        user_name:"番茄就是西红柿",
+                        icon:"http://www.xinxiuyou.com/static/img/usericon/large/190.png",
+                        content: "拉伸拉伸拉伸拉伸拉伸拉伸拉伸拉伸拉伸拉伸拉伸",
+                        theCh: "新秀游主管",//称号  --楼主  --官方
+                        thumbNum: "9",//赞
+                        stampNum: "2",//踩
+                        create_time: "10小时前",
+                        isthumb: false,//是否点赞
+                        isstamp: false,//是否反对
+
+                        ouser_id: "118",
+                        ouser_name: "呼延智障",
+                        ouser_icon: "http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                        ouserCh: "新秀游编辑"
+                    },
                 ],
+            },
+            {
+                lnum: "4",//楼层数
+                id: "13",
+                user_id: "118",
+                user_name: "呼延智障",
+                icon: "http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                content: "评价内容评价内容评价内容评价内容评价内容评价内容评价内容评价内容",
+                theCh: "新秀游编辑编辑编辑编辑编辑编辑",//称号  --楼主  --官方
+                replyNum: "8",//回复
+                thumbNum: "9",//赞
+                stampNum: "2",//踩
+                create_time: "12小时前",
+                isthumb: false,//是否点赞
+                isstamp: false,//是否反对
+                reply:[//评论回复
+                ]
+            },
+            {
+                lnum: "4",//楼层数
+                id: "13",
+                user_id: "118",
+                user_name: "呼延智障",
+                icon: "http://www.xinxiuyou.com/static/img/usericon/large/118.png",
+                content: "评价内2评价内2评价内2评价内2评价内2评价内2评价内2评价内2评价内2",
+                theCh: "新秀游编辑编辑编辑编辑编辑编辑",//称号  --楼主  --官方
+                replyNum: "8",//回复
+                thumbNum: "9",//赞
+                stampNum: "2",//踩
+                create_time: "14小时前",
+                isthumb: false,//是否点赞
+                isstamp: false,//是否反对
+                reply:[//评论回复
+                ]
             }
         ]
 

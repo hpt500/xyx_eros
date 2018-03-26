@@ -24,7 +24,8 @@
                         </div>
                         <text class="fs24 xxyColor999">{{msg.create_time}}</text>
                     </div>
-                    <div class="xxyPostFollow xxyBgColor flex-row-center">
+                    <div class="xxyPostFollow xxyBgColor flex-row-center"
+                    @click="followUser(msg.user_id)">
                         <text class="xxyColorfff fs24">关注</text>
                     </div>
                 </div>
@@ -40,12 +41,12 @@
                         <text class="fs28" 
                         :style="{'color': theOrder==1?'#148bc8':'#7f7f7f'}"
                         @click="postSx('1')">正序</text>
-                        <text class="xxyPost_sx"></text>
+                        <text class="xxyPost_sx24"></text>
                         <text class="fs28" 
                         :style="{'color': theOrder==2?'#148bc8':'#7f7f7f'}"
                         @click="postSx('2')">倒序</text>
                         <text class="xxyPost_sx"></text>
-                        <div class="flex-row-center"
+                        <div class="flex-row-center ml10"
                         @click="justWatch()">
                             <text class="fs28 iconfont mr5" :style="{'color':justWatchLz?'#148bc8':'#7f7f7f'}">&#xe7fe;</text>
                             <text class="fs28" :style="{'color':justWatchLz?'#148bc8':'#7f7f7f'}">只看楼主</text>
@@ -62,7 +63,8 @@
                     </div>
                     <div class="xxyPDB_button flex-row-center mt40">
                         <div class="xxyPDB_btn flex-column flex-align-center" 
-                            v-for="(item,index) in postCzArr">
+                            v-for="(item,index) in postCzArr"
+                            @click="postBtnFn(index)">
                             <div class="xxyPDB_btnIcon flex-row-center"
                                 :style="{'backgroundColor':item.is?'#148bc8':'#ecebeb'}">
                                 <text class="iconfont fs40 ml2"
@@ -74,7 +76,7 @@
                     </div>
                 </div>
                 <div class="xxyPDB_comment">
-                    <div class="xxyPDB_com" v-for="(item,index) in msg.comment">
+                    <div class="xxyPDB_com" v-for="(item,index) in msg.comment" v-if="!justWatchLz?true:(item.user_id==msg.user_id?true:false)">
                         <post-com-box :msg="item" :lzid="msg.user_id"></post-com-box>
                     </div>
                 </div>
@@ -131,8 +133,11 @@
         methods:{
             // 正序 倒序 ->切换
             postSx(index){
+                console.log(index)
                 if(index == this.theOrder) return;
+                console.log("触发")
                 this.theOrder = index;
+                this.msg.comment.reverse()
                 // 置换样式之后对帖子进行数据颠倒
             },
             // 只看楼主
@@ -151,7 +156,60 @@
                     statusBarStyle: "lightContent"
                 })
             },
-            
+            followUser(userid){
+                this.$notice.toast({
+                    message: '关注该用户,id为'+userid
+                });
+            },
+            postBtnFn(index){
+                switch(index){
+                    case 0:
+                        // 分享
+                        this.postFx();break;
+                    case 1:
+                        // 收藏
+                        this.postSc();break;
+                    case 2:
+                        // 点赞
+                        this.postDz();break;
+                    case 3:
+                        // 反对
+                        this.postBs();break;
+                    case 4:
+                        // 回复
+                        this.postHf();break;
+                }
+            },
+            postFx(){
+                // 分享
+                this.$notice.toast({
+                    message: '帖子分享'
+                });
+            },
+            postSc(){
+                // 收藏
+                this.$notice.toast({
+                    message: '帖子收藏'
+                });
+            },
+            postDz(){
+                // 点赞
+                this.$notice.toast({
+                    message: '帖子点赞'
+                });
+            },
+            postBs(){
+                // 反对
+                this.$notice.toast({
+                    message: '帖子反对'
+                });
+            },
+            postHf(){
+                // 回复
+                this.$notice.toast({
+                    message: '帖子回复'
+                });
+            }
         }
 
     }

@@ -31,11 +31,18 @@
     @include border(top,#d4d4d4,dashed,4)
 }
 // 帖子操作竖线间隔
-.xxyPost_sx{
-    width: 2;height: 24px;
-    background-color: #999999;
-    @include xxyMargin(0,0,20,20)
+@mixin xxySx($w,$h,$c,$l,$r){
+    width: $w;height: $h;
+    background-color: $c;
+    @include xxyMargin(0,0,$l,$r)
 }
+.xxyPost_sx24{
+    @include xxySx(2,24,#999999,20,20)
+}
+.xxyPost_sx20{
+    @include xxySx(2,20,#999999,20,20)
+}
+
 
 // 帖子内容
 .xxyPDB_msg{
@@ -53,5 +60,13 @@
 .xxyPDB_com{
     @include xxyPadding(25,25,25,25);
     @include border(bottom,#efefef,solid,2);
+    @extend .flex-column;
+}
+// 帖子回复--详情页
+.xxyPDB_rep{
+    @include border(top,#f4f3f3,solid,20);
+}
+.xxyPDB_repBoxs{
+    @include xxyPadding(20,20,25,25);
 }
 

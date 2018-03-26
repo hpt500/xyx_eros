@@ -109,6 +109,9 @@ export default {
         // 游戏下载
         gameUpload(){
             console.log("游戏下载")
+            this.$notice.toast({
+                message: "游戏下载"
+            })
         },
         onchange(index){
             dom.scrollToElement(this.$refs[`gtab_${index + 1}`])

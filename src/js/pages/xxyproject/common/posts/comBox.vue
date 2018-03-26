@@ -1,29 +1,34 @@
 <template lang="">
-    <div class="xxyPostCom flex-row">
-        <image :src="msg.icon" class="xxyPC_icon mr10" @click="userFn(msg.user_id)"></image>
-        <div class="flex flex-column">
-            <div class="xxyPC_msg flex-column-between">
+    <div class="xxyPostCom flex-column">
+
+        <div class="xxyPC_top flex-row">
+            <image :src="msg.icon" class="xxyPC_icon mr10" @click="userFn(msg.user_id)"></image>
+            <div class="xxyPC_msg flex flex-column-between">
                 <div class="flex-row-between">
-                    <div class="flex-row flex-align-center" @click="userFn(msg.user_id)">
+                    <div class="flex flex-row flex-align-center limit-one" @click="userFn(msg.user_id)">
                         <text class="fs28 xxyColor333 font-weight">{{msg.user_name}}</text>
                         <!--判断该评论id==楼主id则显示楼主标识-->
                         <div class="xxyPostLz ml10" v-if="msg.user_id==lzid">
                             <text class="fs18 xxyColor999">楼主</text>
                         </div>
                         <!--判断是否存在特殊标识-->
-                        <div class="flex-row flex-align-center ml10" v-if="msg.theCh">
+                        <div class="flex flex-row flex-align-center ml10 limit-one" v-if="msg.theCh">
                             <image src="http://www.xinxiuyou.com/static/img/houtai/bz.png" class="xxyTenChIcon_30 mr5"></image>
-                            <text class="fs24 xxyColor535">{{msg.theCh}}</text>
+                            <text class="flex fs24 xxyColor535 limit-one">{{msg.theCh}}</text>
                         </div>
                     </div>
                     <div class="flex-row flex-align-center">
                         <!--此处或许需要判断-->
-                        <text class="fs28 xxyColor999 mr10" @click="reportComment">举报</text>
+                        <text class="fs28 xxyColor999 mr10" @click="reportCom">举报</text>
                         <text class="fs28 xxyColor999">{{msg.lnum+'楼'}}</text>
                     </div>
                 </div>
                 <text class="fs24 xxyColor999">{{msg.create_time}}</text>
             </div>
+        </div>
+
+        <div class="xxyPC_bottom flex-column" :class="[isDetail==''?'ml80':'']">
+            
             <div class="xxyPC_content"> 
                 
                 <div class="xxyPC_con mb20" @click="commentFn">
@@ -45,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="xxyPC_reply" v-if="(msg.reply.length>0||msg.reply)">
+            <div class="xxyPC_reply" v-if="((msg.reply.length>0&&msg.reply)&&isDetail=='')">
                 <div class="xxyPC_rep" 
                     v-for="(item,index) in msg.reply"
                     :class="[index!=1?'mb20':'']" v-if="index<2"
@@ -63,8 +68,9 @@
                 </div>
                 
             </div>
-            
+
         </div>
+
     </div>
 </template>
 <script>
@@ -85,6 +91,10 @@
             lzid: {
                 type: String,
                 default: ""
+            },
+            isDetail: {
+                type: String,
+                default: ""
             }
         },
         components:{
@@ -94,15 +104,30 @@
 
         },
         methods:{
+            reportCom(){
+                // 举报评论
+                this.$notice.toast({
+                    message: '评论举报'
+                });
+            },
             comDz(){
                 // 点赞评论
+                this.$notice.toast({
+                    message: '评论点赞'
+                });
             },
             comBs(){
                 // 反对评论
+                this.$notice.toast({
+                    message: '评论反对'
+                });
             },
             comHf(){
                 // 回复评论
-                this.commentFn()
+                if(this.isDetail=='') this.commentFn();
+                this.$notice.toast({
+                    message: '回复该评论'
+                });
             },
             userFn(userid){
                 // 点击路由用户主页

@@ -20,7 +20,7 @@
 
 }
 .xxyGD_main{
-    @include xxyPadding(20,20,20,20);
+    @include xxyPadding(20,20,25,25);
 }
 // 游戏图标名称
 .xxyGD_admin{
@@ -29,33 +29,33 @@
 }
 // 通知条
 .xxyGD_notcie{
-    @include xxyPadding(0,0,20,20);
+    @include xxyPadding(0,0,25,25);
     height: 70;
     align-items: center;
 }
 // 游戏简介
 .xxyGDC_tex{
-    @include xxyPadding(0,20,20,20)
+    @include xxyPadding(0,20,25,25)
 }
 // 游戏截图
 .xxyGDS_boxs{
     width: 750px;
     // justify-content: space-between;
     flex-wrap: wrap;
-    @include xxyPadding(0,4,12,12);
+    @include xxyPadding(0,4,17,17);
 }
 .xxyGDS_box{
-    @include xxyWH(225px,225px);
+    @include xxyWH(222px,222px);
     // margin-bottom: 16;
     @include xxyMargin(0,16,8,8);
 }
 // 游戏详细
 .xxyGDV_boxs{
     flex-wrap: wrap;
-    @include xxyPadding(10,10,20,20);
+    @include xxyPadding(10,10,25,25);
 }
 .xxyGDV_box{
-    @include xxyWidthQk(710,3);
+    @include xxyWidthQk(700,3);
 }
 
 
